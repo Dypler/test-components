@@ -13,6 +13,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 100;
 }
 .flex__h2 {
   display: flex;
@@ -20,6 +21,7 @@
 }
 body {
   background-color: #0a1219;
+  overflow-x: hidden;
 }
 .gradient__border {
   border: 1px solid transparent;

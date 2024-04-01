@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <template>
-  <div class="pt-[150px] relative">
+  <div class="pt-[87px] relative z-50">
     <!-- Кнопки навигации -->
     <div ref="next" class="swiper-button-next transition"></div>
     <div ref="prev" class="swiper-button-prev transition"></div>

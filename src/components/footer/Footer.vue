@@ -3,7 +3,7 @@ import RiseUp from './footerСomponents/RiseUp.vue'
 import ChatButton from './footerСomponents/ChatButton.vue'
 </script>
 <template>
-  <footer class="header__container py-16">
+  <footer class="header__container py-16 relative">
     <div class="flex justify-between">
       <div class="flex flex-col gap-6">
         <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
