@@ -1,8 +1,9 @@
 <script setup>
-import SiteHeader from './components/SiteHeader.vue'
-import SiteMain from './components/SiteMain.vue'
+import Header from './components/header/Header.vue'
+import Footer from './components/footer/Footer.vue'
 </script>
 <template>
-  <SiteHeader />
-  <SiteMain />
+  <Header />
+  <router-view></router-view>
+  <Footer />
 </template>
