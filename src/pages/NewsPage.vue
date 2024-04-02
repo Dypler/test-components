@@ -1,5 +1,7 @@
 <template>
   <div class="container">
-    <h1 class="font-bebas text-[36px] text-white text-center">новости</h1>
+    <h1 class="font-bebas text-[36px] text-white text-center">
+      новости <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </h1>
   </div>
 </template>

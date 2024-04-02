@@ -1,9 +1,11 @@
 <script setup>
 import RiseUp from './footerСomponents/RiseUp.vue'
 import ChatButton from './footerСomponents/ChatButton.vue'
+import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </script>
 <template>
   <footer class="header__container py-16 relative">
+    <BackgroundHalfCircle class="absolute bottom-0 inset-x-[-20%] w-[40%] -z-[10]" />
     <div class="flex justify-between">
       <div class="flex flex-col gap-6">
         <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
@@ -21,9 +23,9 @@ import ChatButton from './footerСomponents/ChatButton.vue'
       </div>
       <div class="flex flex-col gap-16">
         <div class="flex flex-col gap-5 justify-between">
-          <a class="text-white text-xl font-normal font-bebas leading-[25px]" href=""
-            >ссылки на организации «фосагро»</a
-          >
+          <p class="text-white text-xl font-normal font-bebas leading-[25px]">
+            ссылки на организации «фосагро»
+          </p>
           <a
             class="text-white text-base font-normal font-roboto leading-relaxed cursor-pointer hover:text-hover transition active:text-active"
             href="https://www.phosagro.ru/"

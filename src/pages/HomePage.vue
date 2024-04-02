@@ -11,7 +11,7 @@ import BackgroundActiveCircle from '../components/background/BackgroundActiveCir
 <template>
   <main class="relative">
     <section class="pt-16 pb-16 relative">
-      <BackgroundActiveCircle class="absolute inset-x-[60%] top-[-150%]" />
+      <BackgroundActiveCircle class="absolute inset-x-[65%] top-[-150%] z-50" />
       <BackgroundCircle class="absolute inset-x-[44%] inset-y-[60%]" />
 
       <!-- <BackgroundCircle class="absolute top-0 inset-y-[50px] z-50" /> -->
@@ -55,7 +55,7 @@ import BackgroundActiveCircle from '../components/background/BackgroundActiveCir
       </div>
     </section>
     <section class="pt-16 pb-16 relative">
-      <BackgroundActiveCircle class="absolute right-[70%] top-[50%]" />
+      <BackgroundActiveCircle class="absolute right-[75%] top-[50%]" />
 
       <div class="container flex flex-col gap-40">
         <div class="flex justify-between items-center">

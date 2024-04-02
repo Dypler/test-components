@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between items-center">
     <div
-      class="cursor-pointer"
+      class="cursor-pointer z-40"
       v-for="(image, index) in images"
       :key="index"
       @mouseover="setImage(index, true)"

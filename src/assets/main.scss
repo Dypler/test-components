@@ -8,6 +8,7 @@
   width: 100%;
   max-width: 1760px;
   margin: 0 auto;
+  z-index: 100;
 }
 .container {
   width: 100%;
@@ -19,6 +20,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 body {
   background-color: #0a1219;
   overflow-x: hidden;
