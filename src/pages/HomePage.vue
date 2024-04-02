@@ -6,10 +6,12 @@ import SitePartnersItems from '../components/SitePartnersItems.vue'
 import BackgroundCircle from '../components/background/BackgroundCircle.vue'
 import BackgroundVertical from '../components/background/BackgroundVertical.vue'
 import BackgroundLogo from '../components/background/BackgroundLogo.vue'
+import BackgroundActiveCircle from '../components/background/BackgroundActiveCircle.vue'
 </script>
 <template>
   <main class="relative">
     <section class="pt-16 pb-16 relative">
+      <BackgroundActiveCircle class="absolute inset-x-[60%] top-[-150%]" />
       <BackgroundCircle class="absolute inset-x-[44%] inset-y-[60%]" />
 
       <!-- <BackgroundCircle class="absolute top-0 inset-y-[50px] z-50" /> -->
@@ -52,7 +54,9 @@ import BackgroundLogo from '../components/background/BackgroundLogo.vue'
         <ActiveEvents />
       </div>
     </section>
-    <section class="pt-16 pb-16">
+    <section class="pt-16 pb-16 relative">
+      <BackgroundActiveCircle class="absolute right-[70%] top-[50%]" />
+
       <div class="container flex flex-col gap-40">
         <div class="flex justify-between items-center">
           <h2 class="font-bebas text-white text-4xl">НОВОСТИ</h2>
