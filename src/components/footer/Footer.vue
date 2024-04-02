@@ -5,7 +5,7 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </script>
 <template>
   <footer class="header__container py-16 relative">
-    <BackgroundHalfCircle class="absolute bottom-0 inset-x-[-20%] w-[40%] -z-[10]" />
+    <BackgroundHalfCircle class="absolute bottom-0 inset-x-[-20%] w-[40%]" />
     <div class="flex justify-between">
       <div class="flex flex-col gap-6">
         <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
