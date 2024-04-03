@@ -16,8 +16,17 @@ import BackgroundActiveCircle from '../components/background/BackgroundActiveCir
 
       <!-- <BackgroundCircle class="absolute top-0 inset-y-[50px] z-50" /> -->
       <BackgroundLogo class="absolute inset-x-[44%] inset-y-[5%] opacity-20" />
-      <div class="container">
-        <div class="box box--angled-border border-white p-14 max-w-[990px]">
+      <div class="container relative">
+        <svg
+          class="absolute inset-x-[0%] inset-y-[0%] -z-10 w-full max-w-[990px] h-full max-h-[480px]"
+          viewBox="0 0 990 480"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 1H989V399.586L909.586 479H1V1Z" stroke="white" stroke-width="2" />
+        </svg>
+
+        <div class="p-14 max-w-[990px]">
           <p class="text-white font-bebas font-bold text-[36px] leading-[36px]">ФОСАГРО</p>
           <h1
             class="font-bebas leading-[88px] text-[88px] bg-gradient-to-r from-gradient_start to-gradient_end text-transparent bg-clip-text pt-[12px] font-bebas"

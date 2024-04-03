@@ -5,7 +5,7 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </script>
 <template>
   <footer class="header__container py-16 relative">
-    <BackgroundHalfCircle class="absolute bottom-0 inset-x-[-20%] w-[40%]" />
+    <BackgroundHalfCircle class="absolute bottom-0 inset-x-[-23%] w-[40%]" />
     <div class="flex justify-between">
       <div class="flex flex-col gap-6">
         <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
@@ -90,31 +90,46 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
       <div>
         <p class="text-white text-xl font-normal font-bebas leading-[25px]">меню</p>
         <nav class="pt-6">
-          <ul class="flex flex-col gap-3 text-white">
-            <li
-              class="cursor-pointer hover:text-hover transition active:text-active text-base font-normal"
-            >
-              <router-link to="/news"> Новости </router-link>
+          <ul class="flex flex-col gap-3 text-white w-full">
+            <li class="text-base font-normal">
+              <router-link
+                class="cursor-pointer hover:text-hover transition active:text-active"
+                to="/news"
+              >
+                Новости
+              </router-link>
             </li>
-            <li
-              class="cursor-pointer hover:text-hover transition active:text-active text-base font-normal"
-            >
-              <router-link to="/events"> События </router-link>
+            <li class="text-base font-normal">
+              <router-link
+                class="cursor-pointer hover:text-hover transition active:text-active"
+                to="/events"
+              >
+                События
+              </router-link>
             </li>
-            <li
-              class="cursor-pointer hover:text-hover transition active:text-active text-base font-normal"
-            >
-              <router-link to="/courses"> Обучающие материалы </router-link>
+            <li class="text-base font-normal">
+              <router-link
+                class="cursor-pointer hover:text-hover transition active:text-active"
+                to="/courses"
+              >
+                Обучающие материалы
+              </router-link>
             </li>
-            <li
-              class="cursor-pointer hover:text-hover transition active:text-active text-base font-normal"
-            >
-              <router-link to="/help"> Помощь</router-link>
+            <li class="text-base font-normal">
+              <router-link
+                class="cursor-pointer hover:text-hover transition active:text-active"
+                to="/help"
+              >
+                Помощь</router-link
+              >
             </li>
-            <li
-              class="cursor-pointer hover:text-hover transition active:text-active text-base font-normal"
-            >
-              <router-link to="/contacts"> Контакты</router-link>
+            <li class="text-base font-normal">
+              <router-link
+                class="cursor-pointer hover:text-hover transition active:text-active"
+                to="/contacts"
+              >
+                Контакты</router-link
+              >
             </li>
           </ul>
         </nav>
