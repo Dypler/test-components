@@ -10,8 +10,8 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
     <BackgroundHalfCircle class="absolute inset-x-[70%] w-[35%] rotate-[-180deg]" />
 
     <HeaderLogo />
-    <nav>
-      <ul class="flex justify-between font-roboto text-white gap-16 text-xl">
+    <nav class="flex-grow mr-10">
+      <ul class="flex justify-center font-roboto text-white gap-16 text-xl">
         <li class="cursor-pointer hover:text-hover transition active:text-active">
           <router-link to="/news"> Новости </router-link>
         </li>

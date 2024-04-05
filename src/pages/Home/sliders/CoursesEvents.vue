@@ -13,7 +13,7 @@ import 'swiper/css/navigation'
 
 // import required modules
 
-const modules = [Navigation]
+const modules = [Navigation, Grid]
 
 const prev = ref(null)
 const next = ref(null)
@@ -28,16 +28,17 @@ const next = ref(null)
         prevEl: prev,
         nextEl: next
       }"
+      :loop="false"
       :spaceBetween="30"
       :slidesPerView="2"
       :grid="{
-        collums: 2,
+        rows: 2,
         fill: 'rows'
       }"
       :modules="modules"
       class="mySwiper swiper-grid"
     >
-      <swiper-slide>
+      <swiper-slide class="first__slide">
         <div
           class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[640px] justify-end bg-[url('/main/courses1.png')]"
         >
@@ -51,7 +52,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -71,7 +72,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -91,7 +92,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -111,7 +112,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -131,7 +132,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -151,7 +152,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -171,7 +172,7 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl">
+            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -191,17 +192,17 @@ const next = ref(null)
 }
 .swiper-slide {
   width: fit-content !important;
+  margin-top: 0 !important;
 }
 :deep(.swiper-wrapper) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  row-gap: 40px;
 }
 :deep(.swiper) {
   padding: 0;
 }
-.swiper-slide:nth-child(1) {
+.first__slide {
   grid-area: 1 / 1 / 3 / 2;
 }
 /* .swiper-slide:nth-child(2) {

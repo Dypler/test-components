@@ -30,7 +30,7 @@ const next = ref(null)
         prevEl: prev,
         nextEl: next
       }"
-      :loop="true"
+      :loop="false"
       :slidesPerView="4"
       :spaceBetween="30"
       :modules="modules"
@@ -83,7 +83,9 @@ const next = ref(null)
             </p>
             <PartnersIcon />
           </div>
-          <p class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover">
+          <p
+            class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover tracking-wider"
+          >
             Оптимизация процессов и повышение эффективности строительства: опыт строительной
             компании
           </p>
@@ -112,7 +114,9 @@ const next = ref(null)
             </p>
             <PartnersIcon />
           </div>
-          <p class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover">
+          <p
+            class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover tracking-wider"
+          >
             Оптимизация процессов и повышение эффективности строительства: опыт строительной
             компании
           </p>
@@ -141,7 +145,9 @@ const next = ref(null)
             </p>
             <PartnersIcon />
           </div>
-          <p class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover">
+          <p
+            class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover tracking-wider"
+          >
             Оптимизация процессов и повышение эффективности строительства: опыт строительной
             компании
           </p>
@@ -170,7 +176,9 @@ const next = ref(null)
             </p>
             <PartnersIcon />
           </div>
-          <p class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover">
+          <p
+            class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover tracking-wider"
+          >
             Оптимизация процессов и повышение эффективности строительства: опыт строительной
             компании
           </p>
@@ -199,7 +207,9 @@ const next = ref(null)
             </p>
             <PartnersIcon />
           </div>
-          <p class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover">
+          <p
+            class="text-white text-2xl font-bold font-bebas leading-[28.80px] text-gradient-hover tracking-wider"
+          >
             Оптимизация процессов и повышение эффективности строительства: опыт строительной
             компании
           </p>

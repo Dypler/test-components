@@ -24,7 +24,7 @@ const next = ref(null)
         prevEl: prev,
         nextEl: next
       }"
-      :loop="true"
+      :loop="false"
       :slidesPerView="4"
       :spaceBetween="30"
       :modules="modules"
@@ -50,7 +50,7 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover">
+          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -79,7 +79,7 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover">
+          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -108,7 +108,7 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover">
+          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -137,7 +137,7 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover">
+          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -166,7 +166,7 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover">
+          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
