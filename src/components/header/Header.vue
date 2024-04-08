@@ -4,12 +4,14 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </script>
 <template>
   <div class="header__background">
-    <header class="flex justify-between header__container pt-10 pb-16 items-center relative">
+    <header
+      class="flex justify-between header__container pt-[31px] pb-[40px] items-center relative"
+    >
       <BackgroundHalfCircle class="absolute inset-x-[-20%] rotate-[-180deg]" />
       <BackgroundHalfCircle class="absolute inset-x-[70%] w-[35%] rotate-[-180deg]" />
 
       <HeaderLogo />
-      <nav class="flex-grow mr-10">
+      <nav class="m-auto">
         <ul class="flex justify-center font-roboto text-white gap-16 text-xl">
           <li class="cursor-pointer hover:text-hover transition active:text-active">
             <router-link to="/news"> Новости </router-link>
@@ -29,7 +31,7 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
         </ul>
       </nav>
       <a
-        class="text-white text-xl font-normal hover:text-hover transition active:text-active"
+        class="text-white text-xl font-normal hover:text-hover transition active:text-active flex justify-end ml-auto"
         href="#"
         >Войти</a
       >

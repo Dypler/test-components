@@ -8,8 +8,8 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
   <div class="footer__background">
     <footer class="header__container pt-40 pb-16 relative">
       <BackgroundQuarterCircle class="absolute bottom-0 inset-x-[-80%] -z-10 pointer-events-none" />
-      <div class="flex justify-between">
-        <div class="flex flex-col gap-6">
+      <div class="flex">
+        <div class="flex flex-col gap-6 mr-[181px]">
           <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
           <p class="text-white text-xl font-normal font-bebas leading-[25px]">
             © 2024 Группа «ФосАгро»
@@ -23,7 +23,7 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             >
           </div>
         </div>
-        <div class="flex flex-col gap-16">
+        <div class="flex flex-col gap-16 mr-[267px]">
           <div class="flex flex-col gap-5 justify-between">
             <p class="text-white text-xl font-normal font-bebas leading-[25px]">
               ссылки на организации «фосагро»
@@ -89,7 +89,7 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             </div>
           </div>
         </div>
-        <div>
+        <div class="mr-[220px]">
           <p class="text-white text-xl font-normal font-bebas leading-[25px]">меню</p>
           <nav class="pt-6">
             <ul class="flex flex-col gap-3 text-white w-full">
