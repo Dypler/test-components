@@ -1,6 +1,5 @@
 <script setup>
 import HeaderLogo from './headerComponents/HeaderLogo.vue'
-// import HeaderLogin from './headerComponents/HeaderLogin.vue'
 import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </script>
 <template>
@@ -40,7 +39,7 @@ import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
 </template>
 <style scoped>
 .header__background {
-  background: url(./main/Vector_20.svg) no-repeat center;
+  background: url(/main/Vector_20.svg) no-repeat center;
   margin: 0 40px;
   background-position: 0 100%;
   background-size: contain;

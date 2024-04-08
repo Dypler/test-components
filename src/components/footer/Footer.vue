@@ -147,7 +147,7 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
 </template>
 <style>
 .footer__background {
-  background: url(./main/footer__vector.svg) no-repeat center;
+  background: url(/main/footer__vector.svg) no-repeat center;
   margin: 0 40px;
   background-position: 0 0;
   background-size: contain;
