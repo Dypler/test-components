@@ -13,7 +13,7 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
   <main class="relative">
     <section class="pt-[131px] pb-16 relative">
       <BackgroundActiveCircle class="absolute inset-x-[65%] top-[-150%] z-50" />
-      <BackgroundCircle class="absolute inset-x-[44%] inset-y-[60%]" />
+      <BackgroundCircle class="absolute inset-x-[38%] inset-y-[38%]" />
 
       <!-- <BackgroundCircle class="absolute top-0 inset-y-[50px] z-50" /> -->
       <BackgroundLogo class="absolute inset-x-[44%] inset-y-[5%] opacity-20" />
@@ -104,7 +104,7 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
         <NewsEvents />
       </div>
 
-      <BackgroundCircle class="absolute inset-x-[40%] inset-y-[58%]" />
+      <BackgroundCircle class="absolute inset-x-[35%] inset-y-[58%]" />
     </section>
     <section class="pt-16 pb-24 relative">
       <div class="container">
@@ -122,55 +122,10 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
         <BackgroundVertical class="absolute left-[80%] inset-y-[35%]" />
       </div>
     </section>
-    <section class="pt-16 pb-16">
+    <section class="pt-16 pb-10">
       <div class="container">
         <SitePartnersItems />
       </div>
     </section>
   </main>
 </template>
-<style scoped>
-/* .box {
-  position: relative;
-  z-index: 1000;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: transparent; 
-}
-
-.box--angled-border::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  border-top: 80px solid white;
-  border-right: 80px solid #0a1219;
-  z-index: -10;
-}
-
-.box--angled-border::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  border-top: 80px solid #0a1219;
-  border-right: 80px solid transparent;
-  z-index: -10;
-}
-.solid {
-  z-index: 1000;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-color: transparent;
-  background-image: linear-gradient(
-    to right,
-    #fff 0%,
-    #fff 1px,
-    transparent 1px,
-    transparent calc(100% - 1px),
-    #fff calc(100% - 1px),
-    #fff 100%
-  );
-  background-repeat: no-repeat;
-} */
-</style>

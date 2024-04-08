@@ -29,7 +29,7 @@ const next = ref(null)
         nextEl: next
       }"
       :loop="false"
-      :spaceBetween="30"
+      :spaceBetween="40"
       :slidesPerView="2"
       :grid="{
         rows: 2,
@@ -198,6 +198,7 @@ const next = ref(null)
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  row-gap: 40px;
 }
 :deep(.swiper) {
   padding: 0;

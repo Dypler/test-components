@@ -26,12 +26,12 @@ const next = ref(null)
       }"
       :loop="false"
       :slidesPerView="4"
-      :spaceBetween="30"
+      :spaceBetween="0"
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide class="w-[270px]">
-        <div class="flex flex-col gap-4 group cursor-pointer">
+      <swiper-slide class="active-slide background__slide">
+        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
           <div class="relative">
             <div class="scale">
               <img
@@ -59,8 +59,8 @@ const next = ref(null)
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="w-[270px]">
-        <div class="flex flex-col gap-4 group cursor-pointer">
+      <swiper-slide class="active-slide background__slide">
+        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
           <div class="relative">
             <div class="scale">
               <img
@@ -88,8 +88,8 @@ const next = ref(null)
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="w-[270px]">
-        <div class="flex flex-col gap-4 group cursor-pointer">
+      <swiper-slide class="active-slide background__slide">
+        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
           <div class="relative">
             <div class="scale">
               <img
@@ -117,8 +117,8 @@ const next = ref(null)
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="w-[270px]">
-        <div class="flex flex-col gap-4 group cursor-pointer">
+      <swiper-slide class="active-slide background__slide">
+        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
           <div class="relative">
             <div class="scale">
               <img
@@ -146,8 +146,8 @@ const next = ref(null)
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="w-[270px]">
-        <div class="flex flex-col gap-4 group cursor-pointer">
+      <swiper-slide class="active-slide background__slide">
+        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
           <div class="relative">
             <div class="scale">
               <img
@@ -178,3 +178,92 @@ const next = ref(null)
     </swiper>
   </div>
 </template>
+<style scoped>
+.text-gradient-hover {
+  transition: background-image 0.7s ease; /* Явно указываем, что переход применяется к background-size */
+}
+.group:hover .text-gradient-hover {
+  background-image: linear-gradient(to right, #f19945, #da0048);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.7s ease;
+}
+.group {
+  transition:
+    background-color 0.7s ease-linear,
+    color 0.7s ease-linear;
+}
+.scale {
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 85% 100%, 0% 100%);
+
+  display: inline-block;
+  overflow: hidden;
+}
+
+.background__hover {
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 82% 100%, 0% 100%);
+  background-size: 100%;
+  transition: background-size 0.7s ease;
+}
+.background__hover:hover {
+  background-size: 110%;
+}
+
+.background__slide:hover {
+  background: url('/main/backgroundSliderLong.svg') center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0 0;
+  z-index: 1;
+  display: block;
+}
+.swiper-wrapper {
+  height: max-content;
+}
+.active-slide {
+  width: fit-content !important;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  color: white;
+  &:hover {
+    background-image: linear-gradient(to right, #f19945, #da0048);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, -40px);
+  left: auto;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, -40px);
+  right: auto;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  color: #3e4d59;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/* Дополнительные стили для кнопок/иконок могут быть добавлены здесь */
+</style>
