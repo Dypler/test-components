@@ -7,7 +7,6 @@
   width: 100%;
   max-width: 1760px;
   margin: 0 auto;
-
   z-index: 100;
 }
 .container {
@@ -22,13 +21,36 @@
 }
 
 body {
+  position: relative;
+
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: #0a1219;
-  overflow-x: hidden;
 }
 .gradient__border {
   border: 1px solid transparent;
   border-image: linear-gradient(45deg, #f19945, #da0048) 1;
   &:active {
     border: 1px solid white;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 1700px) {
+  .header__container {
+    padding: 0 24px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 768px) {
+  .header__container {
+    padding: 0 16px;
+  }
+  .container {
+    padding: 0 16px;
   }
 }

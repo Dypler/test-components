@@ -13,6 +13,11 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif']
+      },
+      extend: {
+        backgroundImage: {
+          custom: "url('/main/Vector_20.svg')"
+        }
       }
     }
   },

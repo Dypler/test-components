@@ -6,15 +6,23 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
 </script>
 <template>
   <div class="footer__background">
-    <footer class="header__container pt-40 pb-16 relative">
-      <BackgroundQuarterCircle class="absolute bottom-0 inset-x-[-80%] -z-10 pointer-events-none" />
-      <div class="flex">
-        <div class="flex flex-col gap-6 mr-[181px]">
+    <footer class="header__container relative">
+      <BackgroundQuarterCircle
+        class="hidden xl:block absolute bottom-0 inset-x-[-80%] -z-10 pointer-events-none"
+      />
+      <div
+        class="flex flex-col gap-6 items-center md:flex-row 2xl:justify-between pt-[40px] pb-7 md:pt-40 md:pb-16"
+      >
+        <div
+          class="flex text-center md:text-left items-center md:items-stretch flex-col gap-6 2xl:mr-[181px]"
+        >
           <img class="w-[142px] h-[101px] relative" src="/main/footer__logo.svg" alt="" />
-          <p class="text-white text-xl font-normal font-bebas leading-[25px]">
+          <p class="text-white text-lg md:text-xl font-normal font-bebas leading-[25px]">
             © 2024 Группа «ФосАгро»
           </p>
-          <div class="text-white text-base font-normal font-roboto leading-relaxed flex flex-col">
+          <div
+            class="text-white md: text-base font-normal font-roboto leading-relaxed flex flex-col gap-3"
+          >
             <a class="cursor-pointer hover:text-hover transition active:text-active" href=""
               >Политика конфиденциальности</a
             >
@@ -23,9 +31,9 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             >
           </div>
         </div>
-        <div class="flex flex-col gap-16 mr-[267px]">
-          <div class="flex flex-col gap-5 justify-between">
-            <p class="text-white text-xl font-normal font-bebas leading-[25px]">
+        <div class="flex flex-col gap-16 2xl:mr-[267px]">
+          <div class="flex items-center md:items-stretch flex-col gap-5 justify-between">
+            <p class="text-white text-lg md:text-xl font-normal font-bebas leading-[25px]">
               ссылки на организации «фосагро»
             </p>
             <a
@@ -36,8 +44,8 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
               Официальный сайт Группы Компаний «ФосАгро»
             </a>
           </div>
-          <div class="flex gap-6 flex-col">
-            <p class="text-white text-xl font-normal font-bebas leading-[25px]">
+          <div class="flex items-center md:items-stretch gap-6 flex-col">
+            <p class="text-white text-lg md:text-xl font-normal font-bebas leading-[25px]">
               мы в социальных сетях:
             </p>
             <div class="flex gap-4">
@@ -89,8 +97,8 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             </div>
           </div>
         </div>
-        <div class="mr-[220px]">
-          <p class="text-white text-xl font-normal font-bebas leading-[25px]">меню</p>
+        <div class="hidden md:block 2xl:mr-[220px]">
+          <p class="text-white text-lg md:text-xl font-normal font-bebas leading-[25px]">меню</p>
           <nav class="pt-6">
             <ul class="flex flex-col gap-3 text-white w-full">
               <li class="text-base font-normal">
@@ -136,12 +144,12 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             </ul>
           </nav>
         </div>
-        <div class="flex flex-col justify-center gap-[18px]">
+        <div class="absolute right-0 top-0 md:static flex flex-col justify-center gap-[18px]">
           <ChatButton />
           <RiseUp />
         </div>
       </div>
-      <BackgroundVerticalBottom class="absolute inset-x-[55%] bottom-0" />
+      <BackgroundVerticalBottom class="hidden xl:block absolute inset-x-[55%] bottom-0" />
     </footer>
   </div>
 </template>
@@ -151,5 +159,11 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
   margin: 0 40px;
   background-position: 0 0;
   background-size: contain;
+}
+@media (max-width: 1700px) {
+  .footer__background {
+    background: none;
+    margin: 0;
+  }
 }
 </style>

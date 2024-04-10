@@ -1,19 +1,31 @@
 <script setup>
+import { Pagination, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper/modules'
 import { ref } from 'vue'
-import ShareIcon from './SlidersComponents/ShareIcon.vue'
 import CopyIcon from './SlidersComponents/CopyIcon.vue'
-// Import Swiper styles
+import ShareIcon from './SlidersComponents/ShareIcon.vue'
 import 'swiper/css'
-
+import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-// import required modules
-const modules = [Navigation]
+const modules = [Navigation, Pagination]
 
 const prev = ref(null)
 const next = ref(null)
+const breakpoints = {
+  360: {
+    slidesPerView: 1
+  },
+  640: {
+    slidesPerView: 2
+  },
+  768: {
+    slidesPerView: 4
+  },
+  1024: {
+    slidesPerView: 4
+  }
+}
 </script>
 <template>
   <div class="relative">
@@ -24,14 +36,20 @@ const next = ref(null)
         prevEl: prev,
         nextEl: next
       }"
+      :pagination="{
+        clickable: true
+      }"
       :loop="false"
-      :slidesPerView="4"
       :spaceBetween="0"
       :modules="modules"
+      :breakpoints="breakpoints"
+      slidesPerGroup="1"
       class="mySwiper"
     >
       <swiper-slide class="active-slide background__slide">
-        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
+        <div
+          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+        >
           <div class="relative">
             <div class="scale">
               <img
@@ -50,7 +68,9 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
+          <p
+            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+          >
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -60,7 +80,9 @@ const next = ref(null)
         </div>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
+        <div
+          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+        >
           <div class="relative">
             <div class="scale">
               <img
@@ -79,7 +101,9 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
+          <p
+            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+          >
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -89,7 +113,9 @@ const next = ref(null)
         </div>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
+        <div
+          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+        >
           <div class="relative">
             <div class="scale">
               <img
@@ -108,7 +134,9 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
+          <p
+            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+          >
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -118,7 +146,9 @@ const next = ref(null)
         </div>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
+        <div
+          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+        >
           <div class="relative">
             <div class="scale">
               <img
@@ -137,7 +167,9 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
+          <p
+            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+          >
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -147,7 +179,9 @@ const next = ref(null)
         </div>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div class="flex flex-col gap-4 max-w-[270px] group cursor-pointer mx-[15px]">
+        <div
+          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+        >
           <div class="relative">
             <div class="scale">
               <img
@@ -166,7 +200,9 @@ const next = ref(null)
           >
             01 февраля
           </p>
-          <p class="font-bebas text-white font-bold text-2xl text-gradient-hover tracking-wider">
+          <p
+            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+          >
             Заголовок события, которое может называться длинно. При клике ведет на карточку
           </p>
           <p class="font-roboto text-white text-base leading-relaxed font-light">
@@ -211,11 +247,13 @@ const next = ref(null)
   background-size: 110%;
 }
 
-.background__slide:hover {
-  background: url('/main/backgroundSliderLong.svg') center no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
+@media (min-width: 1280px) {
+  .background__slide:hover {
+    background: url('/main/backgroundSliderLong.svg') center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
 }
 .swiper {
   margin-left: auto;
@@ -247,17 +285,20 @@ const next = ref(null)
     background-clip: text;
   }
 }
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: var(--swiper-navigation-sides-offset, -40px);
-  left: auto;
+@media (min-width: 1280px) {
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, -40px);
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, -40px);
+    right: auto;
+  }
 }
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: var(--swiper-navigation-sides-offset, -40px);
-  right: auto;
-}
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   color: #3e4d59;
@@ -265,5 +306,34 @@ const next = ref(null)
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-pagination {
+    display: block !important;
+  }
+}
+.swiper-pagination {
+  display: none;
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination-bullet {
+  width: 28px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 0;
+  background: white;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+}
 /* Дополнительные стили для кнопок/иконок могут быть добавлены здесь */
 </style>

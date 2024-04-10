@@ -3,7 +3,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
-import { DatePicker } from 'ant-design-vue'
+import Antd from 'ant-design-vue'
+// import 'ant-design-vue/dist/antd.css'
 
 import HomePage from './pages/Home/HomePage.vue'
 import EventsPage from './pages/Events/EventsPage.vue'
@@ -20,6 +21,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
-const app = createApp(App).use(DatePicker).use(createPinia()).use(router)
+const app = createApp(App).use(Antd).use(createPinia()).use(router)
 
 app.mount('#app')

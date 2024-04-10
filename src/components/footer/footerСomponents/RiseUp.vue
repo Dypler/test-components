@@ -1,6 +1,13 @@
 <template>
   <div class="cursor-pointer" @click="scrollToTop">
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      class="w-full max-w-[50px] md:max-w-[60px]"
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g id="Group">
         <path
           class="cursor-pointer hover:fill-[#898C94] active:fill-[#898C94] transition"

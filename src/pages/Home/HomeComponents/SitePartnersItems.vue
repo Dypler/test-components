@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center gap-5">
     <div
       class="cursor-pointer z-40"
       v-for="(image, index) in images"
@@ -7,7 +7,7 @@
       @mouseover="setImage(index, true)"
       @mouseleave="setImage(index, false)"
     >
-      <img class="w-full h-[100px]" :src="image.current" />
+      <img class="w-full h-full h-max-[60px] md:h-[100px]" :src="image.current" />
     </div>
   </div>
 </template>

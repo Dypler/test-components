@@ -20,7 +20,7 @@ const next = ref(null)
 </script>
 
 <template>
-  <div class="relative pt-20">
+  <div class="relative pt-[40px] xl:pt-20">
     <div ref="next" class="swiper-button-next transition"></div>
     <div ref="prev" class="swiper-button-prev transition"></div>
     <swiper
@@ -29,18 +29,18 @@ const next = ref(null)
         nextEl: next
       }"
       :loop="false"
-      :spaceBetween="40"
+      :spaceBetween="0"
       :slidesPerView="2"
       :grid="{
         rows: 2,
-        fill: 'rows'
+        fill: 'row'
       }"
       :modules="modules"
       class="mySwiper swiper-grid"
     >
       <swiper-slide class="first__slide">
         <div
-          class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[640px] justify-end bg-[url('/main/courses1.png')]"
+          class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] xl:h-[640px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -60,7 +60,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses2.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses2.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -80,7 +80,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -100,7 +100,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -120,7 +120,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -140,7 +140,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -160,7 +160,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-center bg-cover w-[580px] h-[299px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -184,32 +184,41 @@ const next = ref(null)
 <style scoped>
 .background__hover {
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 85% 100%, 0% 100%);
-  background-size: 100%; /* Указываем начальный размер фона */
-  transition: background-size 0.7s ease; /* Явно указываем, что переход применяется к background-size */
+  background-size: 100%;
+  transition: background-size 0.7s ease;
 }
 .background__hover:hover {
   background-size: 110%;
 }
 .swiper-slide {
-  width: fit-content !important;
   margin-top: 0 !important;
+  width: auto !important;
 }
-:deep(.swiper-wrapper) {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 40px;
+@media (min-width: 1280px) {
+  :deep(.swiper-wrapper) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+  :deep(.swiper) {
+    padding: 0;
+  }
+  .first__slide {
+    grid-area: 1 / 1 / 3 / 2;
+  }
 }
-:deep(.swiper) {
-  padding: 0;
+@media (max-width: 1280px) {
+  :deep(.swiper-wrapper) {
+    display: flex;
+    gap: 40px;
+  }
+  .first__slide {
+    grid-area: none;
+  }
+  .swiper-grid > .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
-.first__slide {
-  grid-area: 1 / 1 / 3 / 2;
-}
-/* .swiper-slide:nth-child(2) {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.swiper-slide:nth-child(3) {
-  grid-area: 2 / 2 / 3 / 3;
-} */
 </style>

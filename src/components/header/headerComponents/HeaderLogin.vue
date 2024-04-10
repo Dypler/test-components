@@ -1,3 +1,3 @@
 <template>
-  <img class="cursor-pointer" src="/main/login.svg" alt="login" />
+  <img class="cursor-pointer flex-1" src="/main/login.svg" alt="login" />
 </template>
