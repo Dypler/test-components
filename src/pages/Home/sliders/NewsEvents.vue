@@ -12,6 +12,8 @@ const modules = [Navigation, Pagination]
 
 const prev = ref(null)
 const next = ref(null)
+const pagination = ref(null)
+
 const breakpoints = {
   320: {
     slidesPerView: 'auto',
@@ -34,12 +36,15 @@ const breakpoints = {
   <div class="relative">
     <div ref="next" class="swiper-button-next transition"></div>
     <div ref="prev" class="swiper-button-prev transition"></div>
+    <div ref="pagination" class="swiper-pagination"></div>
+
     <swiper
       :navigation="{
         prevEl: prev,
         nextEl: next
       }"
       :pagination="{
+        el: pagination,
         clickable: true
       }"
       :loop="false"

@@ -31,7 +31,7 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             >
           </div>
         </div>
-        <div class="flex flex-col gap-16 2xl:mr-[267px]">
+        <div class="flex flex-col gap-6 md:gap-16 2xl:mr-[267px]">
           <div class="flex items-center md:items-stretch flex-col gap-5 justify-between">
             <p class="text-white text-lg md:text-xl font-normal font-bebas leading-[25px]">
               ссылки на организации «фосагро»
@@ -144,7 +144,7 @@ import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
             </ul>
           </nav>
         </div>
-        <div class="absolute right-0 top-0 md:static flex flex-col justify-center gap-[18px]">
+        <div class="absolute right-[16px] top-0 md:static flex flex-col justify-center gap-[18px]">
           <ChatButton />
           <RiseUp />
         </div>

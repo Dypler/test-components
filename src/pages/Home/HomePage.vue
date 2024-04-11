@@ -14,10 +14,14 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
     <section
       class="pt-[22px] pb-[31px] md:pt-[42px] md:pb-[41px] 2xl:pt-[131px] 2xl:pb-16 relative"
     >
-      <BackgroundActiveCircle class="absolute inset-x-[65%] top-[-150%] z-50" />
-      <BackgroundCircle class="absolute inset-x-[38%] inset-y-[38%]" />
+      <BackgroundActiveCircle class="hidden md:block absolute inset-x-[65%] top-[-150%] z-50" />
+      <BackgroundCircle
+        class="absolute inset-x-[20%] inset-y-[50%] md:inset-x-[38%] md:inset-y-[38%]"
+      />
 
-      <BackgroundLogo class="absolute inset-x-[44%] inset-y-[5%] opacity-20" />
+      <BackgroundLogo
+        class="absolute inset-x-[50%] inset-y-[-10%] md:inset-x-[44%] md:inset-y-[5%] opacity-20 w-full"
+      />
       <div class="container relative">
         <svg
           preserveAspectRatio="none"
@@ -57,8 +61,8 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
     </section>
     <section class="pb-[44px] xl:pt-16 xl:pb-16 relative">
       <div class="container">
-        <BackgroundVertical class="absolute right-[58%] inset-y-[6%]" />
-        <BackgroundVertical class="absolute inset-x-[80%] inset-y-[76%]" />
+        <BackgroundVertical class="hidden md:block absolute right-[58%] inset-y-[6%]" />
+        <BackgroundVertical class="hidden md:block absolute inset-x-[80%] inset-y-[76%]" />
         <div class="flex justify-between items-center">
           <h2 class="font-bebas text-[32px] md:text-5xl xl:text-[54px] text-white">
             АКТИВНЫЕ СОБЫТИЯ
@@ -145,9 +149,9 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
       <div class="container">
         <NewsEvents />
       </div>
-      <BackgroundCircle class="absolute inset-x-[35%] inset-y-[58%]" />
+      <BackgroundCircle class="hidden md:block absolute inset-x-[35%] inset-y-[58%]" />
     </section>
-    <section class="pb-[60px] xl:pt-16 xl:pb-16 relative">
+    <section class="pb-[69px] sm:pb-[94px] xl:pt-16 xl:pb-16 relative">
       <div class="container">
         <div class="flex justify-between items-center">
           <h2 class="font-bebas text-white text-[32px] md:text-5xl xl:text-[54px]">Курсы</h2>
@@ -173,12 +177,13 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
           </router-link>
         </div>
         <CoursesEvents />
-        <BackgroundVertical class="absolute right-[70%] inset-y-[55%]" />
+        <BackgroundVertical class="hidden md:block absolute right-[70%] inset-y-[55%]" />
 
-        <BackgroundVertical class="absolute left-[80%] inset-y-[35%]" />
+        <BackgroundVertical class="hidden md:block absolute left-[80%] inset-y-[35%]" />
+        <BackgroundCircle class="absolute inset-x-[30%] inset-y-[-10%]" />
       </div>
     </section>
-    <section class="pb-[44px] xl:pt-16 xl:pb-16 relative">
+    <section class="pt-10 md:pt-16 p pb-16 relative">
       <div class="container">
         <SitePartnersItems />
       </div>

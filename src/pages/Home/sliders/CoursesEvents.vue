@@ -18,6 +18,7 @@ const modules = [Navigation, Grid, Pagination]
 
 const prev = ref(null)
 const next = ref(null)
+const pagination = ref(null)
 const breakpoints = {
   320: {
     spaceBetween: 10,
@@ -54,12 +55,14 @@ const breakpoints = {
   <div class="relative pt-[40px] xl:pt-20">
     <div ref="next" class="swiper-button-next transition"></div>
     <div ref="prev" class="swiper-button-prev transition"></div>
+    <div ref="pagination" class="swiper-pagination"></div>
     <swiper
       :navigation="{
         prevEl: prev,
         nextEl: next
       }"
       :pagination="{
+        el: pagination,
         clickable: true
       }"
       :loop="false"
@@ -82,7 +85,7 @@ const breakpoints = {
               10-16 февраля
             </p>
             <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[28px] xl:text-4xl tracking-wider"
             >
               Заголовок курса. При клике ведет на карточку
             </p>
@@ -237,7 +240,15 @@ const breakpoints = {
   margin-top: 0 !important;
   width: auto !important;
 }
-
+.swiper-pagination {
+  bottom: -30px;
+  display: none;
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
 @media (min-width: 1280px) {
   :deep(.swiper-wrapper) {
     display: grid;
