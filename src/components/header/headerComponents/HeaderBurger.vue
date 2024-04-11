@@ -52,9 +52,7 @@ onUnmounted(() => {
   position: relative;
   z-index: 50;
   align-items: center;
-  justify-content: flex-end;
   gap: 3px;
-  width: 26px;
   height: 15px;
 }
 :where(.css-dev-only-do-not-override-1hsjdkk).ant-dropdown .ant-dropdown-menu {

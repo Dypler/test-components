@@ -14,17 +14,20 @@ const modules = [Navigation, Pagination]
 const prev = ref(null)
 const next = ref(null)
 const breakpoints = {
-  640: {
-    slidesPerView: 2,
-    spaceBetween: 0
+  320: {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    slidesPerGroup: 1
   },
   768: {
-    slidesPerView: 3,
-    spaceBetween: 0
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    slidesPerGroup: 1
   },
   1024: {
-    slidesPerView: 4,
-    spaceBetween: 10
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    slidesPerGroup: 1
   }
 }
 </script>
@@ -45,19 +48,28 @@ const breakpoints = {
       :loop="false"
       :modules="modules"
       :breakpoints="breakpoints"
-      :slidesPerGroup="1"
       class="mySwiper"
     >
       <swiper-slide class="active-slide">
         <router-link to="/news">
           <div
-            class="group relative flex flex-col gap-4 bg-no-repeat transition bg-center background__hover w-[473px] h-[350px] xl:w-[580px] xl:h-[429px] justify-end bg-[url('/main/news1.png')] cursor-pointer xl:mx-[10px]"
+            class="group relative flex flex-col gap-4 bg-no-repeat transition bg-center background__hover w-[227px] md:w-[473px] md:h-[350px] xl:w-[580px] xl:h-[429px] justify-end md:bg-[url('/main/news1.png')] cursor-pointer md:mx-[10px]"
           >
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
+            <div relative>
+              <div class="scale">
+                <img
+                  class="block md:hidden transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news1.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="flex flex-col gap-4 p-8">
+
+            <div class="flex flex-col gap-4 md:p-8">
               <div class="flex items-center gap-3">
                 <p
                   class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
@@ -68,7 +80,7 @@ const breakpoints = {
               </div>
 
               <p
-                class="font-bebas text-gradient-hover text-white font-bold text-[30px] leading-[30px] xl:text-4xl tracking-wider"
+                class="font-bebas text-gradient-hover text-white font-bold text-[20px] md:text-[30px] leading-[30px] xl:text-4xl tracking-wider"
               >
                 Строительная компания успешно завершает крупный проект жилищного строительства
               </p>
@@ -79,7 +91,7 @@ const breakpoints = {
       <swiper-slide class="active-slide background__slide">
         <router-link to="/news">
           <div
-            class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+            class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
           >
             <div class="relative">
               <div class="scale">
@@ -114,7 +126,7 @@ const breakpoints = {
       <swiper-slide class="active-slide background__slide">
         <router-link to="/news">
           <div
-            class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+            class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
           >
             <div class="relative">
               <div class="scale">
@@ -148,7 +160,7 @@ const breakpoints = {
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
         <div
-          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
         >
           <div class="relative">
             <div class="scale">
@@ -181,7 +193,7 @@ const breakpoints = {
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
         <div
-          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
         >
           <div class="relative">
             <div class="scale">
@@ -214,7 +226,7 @@ const breakpoints = {
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
         <div
-          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
         >
           <div class="relative">
             <div class="scale">
@@ -247,7 +259,7 @@ const breakpoints = {
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
         <div
-          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer mx-[10px]"
+          class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
         >
           <div class="relative">
             <div class="scale">

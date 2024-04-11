@@ -13,17 +13,20 @@ const modules = [Navigation, Pagination]
 const prev = ref(null)
 const next = ref(null)
 const breakpoints = {
-  360: {
-    slidesPerView: 1
-  },
-  640: {
-    slidesPerView: 2
+  320: {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    slidesPerGroup: 1
   },
   768: {
-    slidesPerView: 4
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    slidesPerGroup: 1
   },
   1024: {
-    slidesPerView: 4
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    slidesPerGroup: 1
   }
 }
 </script>
@@ -40,10 +43,8 @@ const breakpoints = {
         clickable: true
       }"
       :loop="false"
-      :spaceBetween="0"
       :modules="modules"
       :breakpoints="breakpoints"
-      slidesPerGroup="1"
       class="mySwiper"
     >
       <swiper-slide class="active-slide background__slide">

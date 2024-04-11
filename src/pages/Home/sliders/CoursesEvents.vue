@@ -1,6 +1,6 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Grid } from 'swiper/modules'
+import { Navigation, Grid, Pagination } from 'swiper/modules'
 import { ref } from 'vue'
 import ShareIcon from './SlidersComponents/ShareIcon.vue'
 import CopyIcon from './SlidersComponents/CopyIcon.vue'
@@ -8,15 +8,46 @@ import CopyIcon from './SlidersComponents/CopyIcon.vue'
 
 import 'swiper/css'
 import 'swiper/css/grid'
+import 'swiper/css/pagination'
 
 import 'swiper/css/navigation'
 
 // import required modules
 
-const modules = [Navigation, Grid]
+const modules = [Navigation, Grid, Pagination]
 
 const prev = ref(null)
 const next = ref(null)
+const breakpoints = {
+  320: {
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    slidesPerView: 'auto',
+    grid: {
+      rows: 1,
+      fill: 'row'
+    }
+  },
+  768: {
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    slidesPerView: 'auto'
+  },
+  1024: {
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    slidesPerView: 2
+  },
+  1280: {
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    slidesPerView: 2,
+    grid: {
+      rows: 2,
+      fill: 'row'
+    }
+  }
+}
 </script>
 
 <template>
@@ -28,19 +59,17 @@ const next = ref(null)
         prevEl: prev,
         nextEl: next
       }"
-      :loop="false"
-      :spaceBetween="0"
-      :slidesPerView="2"
-      :grid="{
-        rows: 2,
-        fill: 'row'
+      :pagination="{
+        clickable: true
       }"
+      :loop="false"
+      :breakpoints="breakpoints"
       :modules="modules"
       class="mySwiper swiper-grid"
     >
       <swiper-slide class="first__slide">
         <div
-          class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] xl:h-[640px] justify-end bg-[url('/main/courses1.png')]"
+          class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[638px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -52,7 +81,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -60,7 +91,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses2.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -72,7 +103,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -80,7 +113,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -92,7 +125,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -100,7 +135,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -112,7 +147,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -120,7 +157,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -132,7 +169,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -140,7 +179,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -152,7 +191,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -160,7 +201,7 @@ const next = ref(null)
       </swiper-slide>
       <swiper-slide>
         <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat bg-cover w-full h-[300px] justify-end bg-[url('/main/courses3.png')]"
+          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
         >
           <div class="absolute right-3 top-3 z-10 flex gap-2">
             <CopyIcon />
@@ -172,7 +213,9 @@ const next = ref(null)
             >
               10-16 февраля
             </p>
-            <p class="font-bebas text-gradient-hover text-white font-bold text-4xl tracking-wider">
+            <p
+              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+            >
               Заголовок курса. При клике ведет на карточку
             </p>
           </div>
@@ -194,6 +237,7 @@ const next = ref(null)
   margin-top: 0 !important;
   width: auto !important;
 }
+
 @media (min-width: 1280px) {
   :deep(.swiper-wrapper) {
     display: grid;
@@ -211,7 +255,8 @@ const next = ref(null)
 @media (max-width: 1280px) {
   :deep(.swiper-wrapper) {
     display: flex;
-    gap: 40px;
+    flex-wrap: nowrap;
+    gap: 0;
   }
   .first__slide {
     grid-area: none;
@@ -219,6 +264,9 @@ const next = ref(null)
   .swiper-grid > .swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;
+  }
+  .swiper-slide {
+    height: 100% !important;
   }
 }
 </style>
