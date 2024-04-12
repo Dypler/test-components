@@ -118,7 +118,7 @@ const breakpoints = {
               <PartnersIcon />
             </div>
             <p
-              class="text-white text-[20px] xl:text-2xl font-bold font-bebas xl:leading-[28.80px] text-gradient-hover tracking-wider"
+              class="text-white text-[20px] leading-[30px] xl:text-2xl font-bold font-bebas xl:leading-[28.80px] text-gradient-hover tracking-wider"
             >
               Оптимизация процессов и повышение эффективности строительства: опыт строительной
               компании
@@ -297,11 +297,11 @@ const breakpoints = {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .text-gradient-hover {
   transition: background-image 0.7s ease; /* Явно указываем, что переход применяется к background-size */
 }
-.group:hover .text-gradient-hover {
+.group:hover.text-gradient-hover {
   background-image: linear-gradient(to right, #f19945, #da0048);
   color: transparent;
   background-clip: text;
@@ -360,12 +360,13 @@ const breakpoints = {
 .swiper-button-next {
   position: absolute;
   color: white;
-  &:hover {
-    background-image: linear-gradient(to right, #f19945, #da0048);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
+}
+:hover.swiper-button-prev,
+:hover.swiper-button-next {
+  background-image: linear-gradient(to right, #f19945, #da0048);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 @media (min-width: 1280px) {
   .swiper-button-next,

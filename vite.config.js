@@ -13,7 +13,11 @@ export default defineConfig({
     vueJsx(),
     VueDevTools(),
     Components({
-      resolvers: [AntDesignVueResolver({ importStyle: false })]
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: false // css in js
+        })
+      ]
     })
   ],
   resolve: {

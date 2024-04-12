@@ -129,7 +129,7 @@ import BackgroundActiveCircle from '../../components/background/BackgroundActive
           </p>
           <div class="flex pt-[18px] xl:gap-8 flex-col gap-[10px] md:flex-row">
             <h2
-              class="w-full max-w-[564px] font-bebas text-white text-xl md:text-[38px] md:leading-[45px] xl:text-[54px] xl:leading-[54px]"
+              class="w-full max-w-[564px] font-bebas text-white text-[28px] leading-[33.60px] md:text-[38px] md:leading-[45px] xl:text-[54px] xl:leading-[54px]"
             >
               Заголовок события, которое может называться длинно. При клике ведет на карточку
             </h2>
