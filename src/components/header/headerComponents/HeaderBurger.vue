@@ -46,8 +46,8 @@ onUnmounted(() => {
   <div v-show="isActive" class="dropdown-content">
     <router-link to="/news" class="dropdown-item">Новости</router-link>
     <router-link to="/events" class="dropdown-item">События</router-link>
-    <router-link to="/courses" @click.stop="toggleLearning"> Обучающие материалы </router-link>
-    <router-link to="/help" class="dropdown-item" @click.stop="toggleHelp"> Помощь </router-link>
+    <router-link to="/courses"> Обучающие материалы </router-link>
+    <router-link to="/help" class="dropdown-item"> Помощь </router-link>
 
     <router-link to="/contacts" class="dropdown-item">Контакты</router-link>
   </div>
