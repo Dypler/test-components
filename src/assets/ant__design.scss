@@ -1,0 +1,46 @@
+.ant-select-arrow {
+  color: white;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #677f92;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-select {
+  color: white;
+}
+//хлебные крошки
+.ant-breadcrumb-separator {
+  display: inline-block;
+  background: #e33b47;
+  border-radius: 50%;
+  margin: 2px 16px;
+  width: 6px;
+  height: 6px;
+}
+.ant-breadcrumb a {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #3e4d59;
+  line-height: 160%;
+  &:hover {
+    color: #e33b47;
+  }
+}
+.ant-breadcrumb > span:last-child {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  line-height: 160%;
+}
+.custom__separator {
+  color: #e33b47;
+  width: 6px;
+  height: 6px;
+}
