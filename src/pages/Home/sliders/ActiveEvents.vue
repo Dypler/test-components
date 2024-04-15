@@ -297,7 +297,7 @@ const breakpoints = {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .text-gradient-hover {
   transition: background-image 0.7s ease;
 }
