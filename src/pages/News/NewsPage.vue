@@ -57,7 +57,7 @@ import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
         <p class="text-slate-500 text-base font-normal font-roboto leading-tight max-w-[93px]">
           Показать на странице
         </p>
-        <a-space>
+        <a-space class="max-w-[83px]">
           <a-select
             ref="select"
             v-model:value="value1"
@@ -316,7 +316,7 @@ import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
     </div>
   </div>
 </template>
-<style scoped>
+<!-- <style scoped>
 :deep.ant-select:not(.ant-select-customize-input) .ant-select-selector {
   position: relative;
   background-color: transparent;
@@ -355,4 +355,4 @@ import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
 .background__hover:hover {
   background-size: 110%;
 }
-</style>
+</style> -->

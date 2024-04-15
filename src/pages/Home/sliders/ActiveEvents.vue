@@ -299,9 +299,9 @@ const breakpoints = {
 
 <style lang="scss">
 .text-gradient-hover {
-  transition: background-image 0.7s ease; /* Явно указываем, что переход применяется к background-size */
+  transition: background-image 0.7s ease;
 }
-.group:hover.text-gradient-hover {
+.group:hover .text-gradient-hover {
   background-image: linear-gradient(to right, #f19945, #da0048);
   color: transparent;
   background-clip: text;

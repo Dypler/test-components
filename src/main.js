@@ -8,7 +8,6 @@ import EventsPage from './pages/Events/EventsPage.vue'
 import NewsPage from './pages/News/NewsPage.vue'
 import CoursesPage from './pages/Courses/СoursesPage.vue'
 import HelpPage from './pages/Help/HelpPage.vue'
-import 'ant-design-vue/dist/antd.css'
 import './assets/main.scss'
 
 const routes = [
