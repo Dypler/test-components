@@ -1,15 +1,15 @@
-import './assets/main.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
-// import Antd from 'ant-design-vue'
 
 import HomePage from './pages/Home/HomePage.vue'
 import EventsPage from './pages/Events/EventsPage.vue'
 import NewsPage from './pages/News/NewsPage.vue'
 import CoursesPage from './pages/Courses/СoursesPage.vue'
 import HelpPage from './pages/Help/HelpPage.vue'
+import 'ant-design-vue/dist/antd.css'
+import './assets/main.scss'
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
