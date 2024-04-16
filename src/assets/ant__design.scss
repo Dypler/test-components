@@ -10,6 +10,26 @@
 }
 .ant-select {
   color: white;
+  &-item {
+    color: white;
+  }
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #e33b47;
+  font-weight: 600;
+  background-color: #0e212f;
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #e33b47;
+  font-weight: 600;
+  background-color: #0e212f;
+}
+.ant-select-dropdown .ant-select-item-option:hover {
+  background-color: #0e212f;
+  color: #e33b47;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #0e212f;
 }
 //хлебные крошки
 .ant-breadcrumb-separator {
@@ -43,4 +63,38 @@
   color: #e33b47;
   width: 6px;
   height: 6px;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  display: flex;
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  align-items: center;
+}
+.ant-select-dropdown {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 1050;
+  box-sizing: border-box;
+  padding: 4px 0;
+  border: 1px solid #677f92;
+
+  overflow: hidden;
+  font-size: 14px;
+  font-variant: initial;
+  background-color: #14192a;
+  border-radius: 2px;
+  outline: none;
+  box-shadow:
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }

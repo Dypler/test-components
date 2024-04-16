@@ -12,7 +12,7 @@ const currentCount = ref(8) // Сколько новостей уже отобр
 
 // Функция для загрузки новостей
 async function fetchNews() {
-  newsItems.value = Array.from({ length: currentCount.value }, (_, i) => ({
+  newsItems.value = Array.from({ length: currentCount.value }, () => ({
     date: `01 февраля`,
     title: 'Заголовок события, которое может называться длинно. При клике ведет на карточку',
     description:
@@ -48,7 +48,11 @@ function loadMoreNews() {
       <template #separator><span class="custom__separator"></span></template>
       <a-breadcrumb-item> Новости </a-breadcrumb-item>
     </a-breadcrumb>
-    <h1 class="font-bebas text-[36px] text-white text-left pt-[46px]">новости</h1>
+    <h1
+      class="font-bebas text-[32px] md:text-[48px] xl:text-[54px] text-white text-left pt-[27px] md:pt-[30px] xl:pt-[46px]"
+    >
+      новости
+    </h1>
   </div>
   <div
     class="relative w-full h-[500px] md:h-[683px] xl:h-[713px] bg-[url('/main/bg_news.png')] bg-no-repeat bg-center bg-cover flex items-end mt-[30px] md:mt-[66px] xl:mt-20"
@@ -93,7 +97,8 @@ function loadMoreNews() {
       </a-space>
       <div class="flex flex-row items-center gap-5">
         <p class="text-slate-500 text-base font-normal font-roboto leading-tight max-w-[93px]">
-          Показать на странице
+          Показать <br />
+          на странице
         </p>
         <a-space>
           <a-select v-model:value="pageSize" @change="handleChange" style="width: 83px">
