@@ -10,6 +10,8 @@ import EventsPage from './pages/Events/EventsPage.vue'
 import NewsPage from './pages/News/NewsPage.vue'
 import CoursesPage from './pages/Courses/СoursesPage.vue'
 import HelpPage from './pages/Help/HelpPage.vue'
+import NewsPageItem from './pages/News/NewsPageItem.vue'
+import CoursesPageItem from './pages/Courses/CoursesPageItem.vue'
 
 import './assets/main.scss'
 
@@ -17,7 +19,9 @@ const routes = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/events', name: 'Events', component: EventsPage },
   { path: '/news', name: 'News', component: NewsPage },
+  { path: '/news/id', name: 'NewsItem', component: NewsPageItem },
   { path: '/courses', name: 'Courses', component: CoursesPage },
+  { path: '/courses/id', name: 'CoursesItem', component: CoursesPageItem },
   { path: '/help', name: 'Help', component: HelpPage }
 ]
 

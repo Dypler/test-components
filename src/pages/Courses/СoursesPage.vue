@@ -42,12 +42,12 @@ function loadMoreCourses() {
     <a-breadcrumb>
       <a-breadcrumb-item> <router-link to="/">Главная</router-link></a-breadcrumb-item>
       <template #separator><span class="custom__separator"></span></template>
-      <a-breadcrumb-item> События </a-breadcrumb-item>
+      <a-breadcrumb-item> Обучающие материалы </a-breadcrumb-item>
     </a-breadcrumb>
     <h1
       class="font-bebas text-[32px] md:text-[48px] xl:text-[54px] text-white text-left pt-[27px] md:pt-[30px] xl:pt-[46px]"
     >
-      события
+      Обучающие материалы
     </h1>
   </div>
   <div class="container">
@@ -85,7 +85,8 @@ function loadMoreCourses() {
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-[40px] pt-[40px]" v-auto-animate>
-      <div
+      <router-link
+        to="/courses/id"
         v-for="(course, index) in courseItems"
         :key="course.title"
         :class="{ 'large-grid-item': index === 0 }"
@@ -108,7 +109,7 @@ function loadMoreCourses() {
             {{ course.title }}
           </p>
         </div>
-      </div>
+      </router-link>
     </div>
 
     <div class="text-center">
@@ -116,7 +117,7 @@ function loadMoreCourses() {
         @click="loadMoreCourses"
         class="mt-10 max-h-[61px] mx-auto gradient__border font-bebas text-white text-2xl leading-[28px] uppercase font-normal px-16 py-4 transition hover:bg-gradient-to-r hover:from-gradient_start hover:to-gradient_end hover:text-transparent hover:bg-clip-text active:text-white"
       >
-        еще события
+        еще материалы
       </button>
     </div>
   </div>

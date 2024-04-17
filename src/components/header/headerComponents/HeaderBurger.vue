@@ -10,14 +10,6 @@ function toggleClass() {
   isActive.value = !isActive.value
 }
 
-function toggleLearning() {
-  isLearningOpen.value = !isLearningOpen.value
-}
-
-function toggleHelp() {
-  isHelpOpen.value = !isHelpOpen.value
-}
-
 function handleClickOutside(event) {
   if (burgerRef.value && !burgerRef.value.contains(event.target)) {
     isActive.value = false

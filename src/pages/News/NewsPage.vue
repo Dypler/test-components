@@ -113,7 +113,8 @@ function loadMoreNews() {
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 xl:gap-[40px] pt-[40px]"
       v-auto-animate
     >
-      <div
+      <router-link
+        to="/news/id"
         class="flex flex-col gap-[15px] md:gap-4 w-full group cursor-pointer"
         v-for="news in newsItems"
         :key="news.title"
@@ -144,7 +145,7 @@ function loadMoreNews() {
         <p class="font-roboto text-white text-base leading-relaxed font-light">
           {{ news.description }}
         </p>
-      </div>
+      </router-link>
     </div>
 
     <div class="text-center">
