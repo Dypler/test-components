@@ -71,158 +71,173 @@ const breakpoints = {
       class="mySwiper swiper-grid"
     >
       <swiper-slide class="first__slide">
-        <div
-          class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[638px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="cursor-pointer group background__hover relative flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[638px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[28px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[28px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
+        </router-link>
+      </swiper-slide>
+
+      <swiper-slide>
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
+        <router-link to="/courses/id">
+          <div
+            class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
+          >
+            <div class="absolute right-3 top-3 z-10 flex gap-2">
+              <CopyIcon />
+              <ShareIcon />
+            </div>
+            <div class="flex flex-col gap-4 p-8">
+              <p
+                class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+              >
+                10-16 февраля
+              </p>
+              <p
+                class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
+              >
+                Заголовок курса. При клике ведет на карточку
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div
-          class="relative cursor-pointer group background__hover flex flex-col gap-4 bg-no-repeat w-full max-w-[350px] md:max-w-full h-[242px] xl:h-[300px] justify-end bg-[url('/main/courses1.png')]"
-        >
-          <div class="absolute right-3 top-3 z-10 flex gap-2">
-            <CopyIcon />
-            <ShareIcon />
-          </div>
-          <div class="flex flex-col gap-4 p-8">
-            <p
-              class="border-2 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-            >
-              10-16 февраля
-            </p>
-            <p
-              class="font-bebas text-gradient-hover text-white font-bold text-[28px] leading-[33.60px] xl:text-4xl tracking-wider"
-            >
-              Заголовок курса. При клике ведет на карточку
-            </p>
-          </div>
-        </div>
+        </router-link>
       </swiper-slide>
     </swiper>
   </div>

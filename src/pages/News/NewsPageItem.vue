@@ -1,11 +1,11 @@
 <script setup>
-import CopyIcon from '../Home/sliders/SlidersComponents/CopyIcon.vue'
-import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
+import CopyIcon from '@mainswiper/SlidersComponents/CopyIcon.vue'
+import ShareIcon from '@mainswiper/SlidersComponents/ShareIcon.vue'
 import NewsSliderItem from './NewsSliders/NewsSliderItem.vue'
-import TelegramLink from '@/components/socialLink/TelegramLink.vue'
-import VkLink from '@/components/socialLink/VkLink.vue'
-import WhatsappLink from '@/components/socialLink/WhatsappLink.vue'
-import OdnoklasnikiLink from '@/components/socialLink/OdnoklasnikiLink.vue'
+import TelegramLink from '@social_link/TelegramLink.vue'
+import VkLink from '@social_link/VkLink.vue'
+import WhatsappLink from '@social_link/WhatsappLink.vue'
+import OdnoklasnikiLink from '@social_link/OdnoklasnikiLink.vue'
 import 'ant-design-vue/lib/breadcrumb/style/index.css'
 import 'ant-design-vue/lib/select/style/index.css'
 </script>

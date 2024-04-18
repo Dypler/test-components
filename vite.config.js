@@ -22,7 +22,18 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@home': fileURLToPath(new URL('./src/pages/Home', import.meta.url)),
+      '@events': fileURLToPath(new URL('./src/pages/Events', import.meta.url)),
+      '@news': fileURLToPath(new URL('./src/pages/News', import.meta.url)),
+      '@courses': fileURLToPath(new URL('./src/pages/Courses', import.meta.url)),
+      '@help': fileURLToPath(new URL('./src/pages/Help', import.meta.url)),
+      '@background': fileURLToPath(new URL('./src/components/background', import.meta.url)),
+      '@footer': fileURLToPath(new URL('./src/components/footer', import.meta.url)),
+      '@header': fileURLToPath(new URL('./src/components/header', import.meta.url)),
+      '@social': fileURLToPath(new URL('./src/components/socialLink', import.meta.url)),
+      '@mainswiper': fileURLToPath(new URL('./src/pages/Home/sliders', import.meta.url)),
+      '@social_link': fileURLToPath(new URL('./src/components/socialLink', import.meta.url))
     }
   }
 })

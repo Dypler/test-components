@@ -1,6 +1,6 @@
 <script setup>
 import HeaderLogo from './headerComponents/HeaderLogo.vue'
-import BackgroundHalfCircle from '../background/BackgroundHalfCircle.vue'
+import BackgroundHalfCircle from '@background/BackgroundHalfCircle.vue'
 import HeaderBurger from './headerComponents/HeaderBurger.vue'
 import { ref } from 'vue'
 const isOpenLearning = ref(false)

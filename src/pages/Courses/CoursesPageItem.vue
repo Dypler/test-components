@@ -15,9 +15,11 @@ import 'ant-design-vue/lib/select/style/index.css'
       <a-breadcrumb-item> <router-link to="/">Главная</router-link></a-breadcrumb-item>
       <template #separator><span class="custom__separator"></span></template>
       <a-breadcrumb-item
-        ><router-link to="/news">Обучающие материалы</router-link>
+        ><router-link to="/courses">Обучающие материалы</router-link>
       </a-breadcrumb-item>
-      <template><span class="custom__separator"></span></template>
+      <template
+        ><span class="https://silver-treacle-5bb705.netlify.app/coursescustom__separator"></span
+      ></template>
       <a-breadcrumb-item>Название курса </a-breadcrumb-item>
     </a-breadcrumb>
     <div class="flex justify-between pt-[27px] md:pt-[30px] xl:pt-[46px]">

@@ -1,8 +1,8 @@
 <script setup>
 import RiseUp from './footerСomponents/RiseUp.vue'
 import ChatButton from './footerСomponents/ChatButton.vue'
-import BackgroundVerticalBottom from '../background/BackgroundVerticalBottom.vue'
-import BackgroundQuarterCircle from '../background/BackgroundQuarterCircle.vue'
+import BackgroundVerticalBottom from '@background/BackgroundVerticalBottom.vue'
+import BackgroundQuarterCircle from '@background/BackgroundQuarterCircle.vue'
 </script>
 <template>
   <div class="footer__background">

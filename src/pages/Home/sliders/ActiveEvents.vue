@@ -54,7 +54,7 @@ const breakpoints = {
       class="mySwiper"
     >
       <swiper-slide class="active-slide">
-        <router-link to="/news">
+        <router-link to="/events">
           <div
             class="group relative flex flex-col gap-4 bg-no-repeat transition bg-center background__hover w-[227px] md:w-[473px] md:h-[350px] xl:w-[580px] xl:h-[429px] justify-end md:bg-[url('/main/news1.png')] cursor-pointer md:mx-[10px]"
           >
@@ -92,7 +92,7 @@ const breakpoints = {
         </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <router-link to="/news">
+        <router-link to="/events">
           <div
             class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
           >
@@ -127,7 +127,7 @@ const breakpoints = {
         </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <router-link to="/news">
+        <router-link to="/events">
           <div
             class="flex flex-col gap-4 max-w-[227px] xl:max-w-[270px] h-[429px] group cursor-pointer md:mx-[10px]"
           >

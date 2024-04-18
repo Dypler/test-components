@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="pointer-events-none"
     width="998"
     height="834"
     viewBox="0 0 998 834"

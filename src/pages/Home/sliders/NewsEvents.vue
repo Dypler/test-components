@@ -53,169 +53,179 @@ const breakpoints = {
       class="mySwiper"
     >
       <swiper-slide class="active-slide background__slide">
-        <div
-          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
-        >
-          <div class="relative">
-            <div class="scale">
-              <img
-                class="block transition ease-out duration-700 group-hover:scale-[1.1]"
-                src="/main/news1.png"
-                alt=""
-              />
+        <router-link to="/news/id">
+          <div
+            class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+          >
+            <div class="relative">
+              <div class="scale">
+                <img
+                  class="block transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news1.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
-            </div>
+            <p
+              class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+            >
+              01 февраля
+            </p>
+            <p
+              class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+            >
+              Заголовок события, которое может называться длинно. При клике ведет на карточку
+            </p>
+            <p class="font-roboto text-white text-base leading-relaxed font-light">
+              Не следует, однако забывать, что реализация намеченных плановых заданий требуют
+              определения и уточнения направлений прогрессивного развития.
+            </p>
           </div>
-          <p
-            class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-          >
-            01 февраля
-          </p>
-          <p
-            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
-          >
-            Заголовок события, которое может называться длинно. При клике ведет на карточку
-          </p>
-          <p class="font-roboto text-white text-base leading-relaxed font-light">
-            Не следует, однако забывать, что реализация намеченных плановых заданий требуют
-            определения и уточнения направлений прогрессивного развития.
-          </p>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div
-          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
-        >
-          <div class="relative">
-            <div class="scale">
-              <img
-                class="block transition ease-out duration-700 group-hover:scale-[1.1]"
-                src="/main/news2.png"
-                alt=""
-              />
+        <router-link to="/news/id">
+          <div
+            class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+          >
+            <div class="relative">
+              <div class="scale">
+                <img
+                  class="block transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news2.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
-            </div>
+            <p
+              class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+            >
+              01 февраля
+            </p>
+            <p
+              class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+            >
+              Заголовок события, которое может называться длинно. При клике ведет на карточку
+            </p>
+            <p class="font-roboto text-white text-base leading-relaxed font-light">
+              Не следует, однако забывать, что реализация намеченных плановых заданий требуют
+              определения и уточнения направлений прогрессивного развития.
+            </p>
           </div>
-          <p
-            class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-          >
-            01 февраля
-          </p>
-          <p
-            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
-          >
-            Заголовок события, которое может называться длинно. При клике ведет на карточку
-          </p>
-          <p class="font-roboto text-white text-base leading-relaxed font-light">
-            Не следует, однако забывать, что реализация намеченных плановых заданий требуют
-            определения и уточнения направлений прогрессивного развития.
-          </p>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div
-          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
-        >
-          <div class="relative">
-            <div class="scale">
-              <img
-                class="block transition ease-out duration-700 group-hover:scale-[1.1]"
-                src="/main/news3.png"
-                alt=""
-              />
+        <router-link to="/news/id">
+          <div
+            class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+          >
+            <div class="relative">
+              <div class="scale">
+                <img
+                  class="block transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news3.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
-            </div>
+            <p
+              class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+            >
+              01 февраля
+            </p>
+            <p
+              class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+            >
+              Заголовок события, которое может называться длинно. При клике ведет на карточку
+            </p>
+            <p class="font-roboto text-white text-base leading-relaxed font-light">
+              Не следует, однако забывать, что реализация намеченных плановых заданий требуют
+              определения и уточнения направлений прогрессивного развития.
+            </p>
           </div>
-          <p
-            class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-          >
-            01 февраля
-          </p>
-          <p
-            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
-          >
-            Заголовок события, которое может называться длинно. При клике ведет на карточку
-          </p>
-          <p class="font-roboto text-white text-base leading-relaxed font-light">
-            Не следует, однако забывать, что реализация намеченных плановых заданий требуют
-            определения и уточнения направлений прогрессивного развития.
-          </p>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div
-          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
-        >
-          <div class="relative">
-            <div class="scale">
-              <img
-                class="block transition ease-out duration-700 group-hover:scale-[1.1]"
-                src="/main/news1.png"
-                alt=""
-              />
+        <router-link to="/news/id">
+          <div
+            class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+          >
+            <div class="relative">
+              <div class="scale">
+                <img
+                  class="block transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news1.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
-            </div>
+            <p
+              class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+            >
+              01 февраля
+            </p>
+            <p
+              class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+            >
+              Заголовок события, которое может называться длинно. При клике ведет на карточку
+            </p>
+            <p class="font-roboto text-white text-base leading-relaxed font-light">
+              Не следует, однако забывать, что реализация намеченных плановых заданий требуют
+              определения и уточнения направлений прогрессивного развития.
+            </p>
           </div>
-          <p
-            class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-          >
-            01 февраля
-          </p>
-          <p
-            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
-          >
-            Заголовок события, которое может называться длинно. При клике ведет на карточку
-          </p>
-          <p class="font-roboto text-white text-base leading-relaxed font-light">
-            Не следует, однако забывать, что реализация намеченных плановых заданий требуют
-            определения и уточнения направлений прогрессивного развития.
-          </p>
-        </div>
+        </router-link>
       </swiper-slide>
       <swiper-slide class="active-slide background__slide">
-        <div
-          class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
-        >
-          <div class="relative">
-            <div class="scale">
-              <img
-                class="block transition ease-out duration-700 group-hover:scale-[1.1]"
-                src="/main/news1.png"
-                alt=""
-              />
+        <router-link to="/news/id">
+          <div
+            class="flex flex-col gap-[15px] md:gap-4 max-w-[227px] xl:max-w-[270px] group cursor-pointer md:mx-[15px] mr-[20px]"
+          >
+            <div class="relative">
+              <div class="scale">
+                <img
+                  class="block transition ease-out duration-700 group-hover:scale-[1.1]"
+                  src="/main/news1.png"
+                  alt=""
+                />
+              </div>
+              <div class="absolute right-3 top-3 z-10 flex gap-2">
+                <CopyIcon />
+                <ShareIcon />
+              </div>
             </div>
-            <div class="absolute right-3 top-3 z-10 flex gap-2">
-              <CopyIcon />
-              <ShareIcon />
-            </div>
+            <p
+              class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+            >
+              01 февраля
+            </p>
+            <p
+              class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
+            >
+              Заголовок события, которое может называться длинно. При клике ведет на карточку
+            </p>
+            <p class="font-roboto text-white text-base leading-relaxed font-light">
+              Не следует, однако забывать, что реализация намеченных плановых заданий требуют
+              определения и уточнения направлений прогрессивного развития.
+            </p>
           </div>
-          <p
-            class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
-          >
-            01 февраля
-          </p>
-          <p
-            class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider"
-          >
-            Заголовок события, которое может называться длинно. При клике ведет на карточку
-          </p>
-          <p class="font-roboto text-white text-base leading-relaxed font-light">
-            Не следует, однако забывать, что реализация намеченных плановых заданий требуют
-            определения и уточнения направлений прогрессивного развития.
-          </p>
-        </div>
+        </router-link>
       </swiper-slide>
     </swiper>
   </div>

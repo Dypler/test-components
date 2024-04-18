@@ -1,13 +1,13 @@
 <script setup>
-import ActiveEvents from './sliders/ActiveEvents.vue'
-import NewsEvents from './sliders/NewsEvents.vue'
-import CoursesEvents from './sliders/CoursesEvents.vue'
+import ActiveEvents from '@mainswiper/ActiveEvents.vue'
+import NewsEvents from '@mainswiper/NewsEvents.vue'
+import CoursesEvents from '@mainswiper/CoursesEvents.vue'
 import SitePartnersItems from './HomeComponents/SitePartnersItems.vue'
 
-import BackgroundCircle from '../../components/background/BackgroundCircle.vue'
-import BackgroundVertical from '../../components/background/BackgroundVertical.vue'
-import BackgroundLogo from '../../components/background/BackgroundLogo.vue'
-import BackgroundActiveCircle from '../../components/background/BackgroundActiveCircle.vue'
+import BackgroundCircle from '@background/BackgroundCircle.vue'
+import BackgroundVertical from '@background/BackgroundVertical.vue'
+import BackgroundLogo from '@background/BackgroundLogo.vue'
+import BackgroundActiveCircle from '@background/BackgroundActiveCircle.vue'
 </script>
 <template>
   <main class="relative">
