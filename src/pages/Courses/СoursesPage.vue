@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import CopyIcon from '../Home/sliders/SlidersComponents/CopyIcon.vue'
-import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
+import CopyIcon from '../../components/common/CopyIcon.vue'
+import ShareIcon from '../../components/common/ShareIcon.vue'
 
 const pageSize = ref(8) // Количество курсов, отображаемых на странице
 const totalCourseCount = ref(36) // Всего курсов

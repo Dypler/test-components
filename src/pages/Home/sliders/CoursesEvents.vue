@@ -2,8 +2,8 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Grid, Pagination } from 'swiper/modules'
 import { ref } from 'vue'
-import ShareIcon from './SlidersComponents/ShareIcon.vue'
-import CopyIcon from './SlidersComponents/CopyIcon.vue'
+import ShareIcon from '@common/ShareIcon.vue'
+import CopyIcon from '@common/CopyIcon.vue'
 // Import Swiper styles
 
 import 'swiper/css'

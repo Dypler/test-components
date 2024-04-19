@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="circles"
+    class="circles pointer-events-none"
     width="100%"
     height="100%"
     viewBox="0 0 1400 1400"

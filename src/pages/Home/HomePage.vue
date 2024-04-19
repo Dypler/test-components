@@ -1,7 +1,7 @@
 <script setup>
-import ActiveEvents from '@mainswiper/ActiveEvents.vue'
-import NewsEvents from '@mainswiper/NewsEvents.vue'
-import CoursesEvents from '@mainswiper/CoursesEvents.vue'
+import ActiveEvents from '@swiper/ActiveEvents.vue'
+import NewsEvents from '@swiper/NewsEvents.vue'
+import CoursesEvents from '@swiper/CoursesEvents.vue'
 import SitePartnersItems from './HomeComponents/SitePartnersItems.vue'
 
 import BackgroundCircle from '@background/BackgroundCircle.vue'

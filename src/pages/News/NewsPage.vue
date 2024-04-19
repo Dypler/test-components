@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import CopyIcon from '@mainswiper/SlidersComponents/CopyIcon.vue'
-import ShareIcon from '@mainswiper/SlidersComponents/ShareIcon.vue'
+import CopyIcon from '@common/CopyIcon.vue'
+import ShareIcon from '@common/ShareIcon.vue'
 import 'ant-design-vue/lib/breadcrumb/style/index.css'
 import 'ant-design-vue/lib/select/style/index.css'
 

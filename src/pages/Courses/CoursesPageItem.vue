@@ -1,6 +1,6 @@
 <script setup>
-import CopyIcon from '../Home/sliders/SlidersComponents/CopyIcon.vue'
-import ShareIcon from '../Home/sliders/SlidersComponents/ShareIcon.vue'
+import CopyIcon from '../../components/common/CopyIcon.vue'
+import ShareIcon from '../../components/common/ShareIcon.vue'
 import NewsSliderItem from '../News/NewsSliders/NewsSliderItem.vue'
 import TelegramLink from '@/components/socialLink/TelegramLink.vue'
 import VkLink from '@/components/socialLink/VkLink.vue'

@@ -32,7 +32,8 @@ export default defineConfig({
       '@footer': fileURLToPath(new URL('./src/components/footer', import.meta.url)),
       '@header': fileURLToPath(new URL('./src/components/header', import.meta.url)),
       '@social': fileURLToPath(new URL('./src/components/socialLink', import.meta.url)),
-      '@mainswiper': fileURLToPath(new URL('./src/pages/Home/sliders', import.meta.url)),
+      '@common': fileURLToPath(new URL('./src/components/common', import.meta.url)),
+      '@swiper': fileURLToPath(new URL('./src/pages/Home/sliders', import.meta.url)),
       '@social_link': fileURLToPath(new URL('./src/components/socialLink', import.meta.url))
     }
   }

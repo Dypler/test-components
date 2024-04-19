@@ -8,6 +8,9 @@
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+.a-select {
+  width: auto; /* или 100%, если вы хотите, чтобы select растягивался на всю доступную ширину */
+}
 .ant-select {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -15,6 +18,9 @@
   &-item {
     color: white;
   }
+}
+.ant-select-item {
+  display: flex;
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   color: #e33b47;

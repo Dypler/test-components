@@ -27,7 +27,11 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior() {
+    // Всегда перемещать пользователя вверх страницы при переходах
+    return { top: 0 }
+  }
 })
 const app = createApp(App).use(createPinia()).use(router).use(Antd).use(autoAnimatePlugin)
 
