@@ -36,5 +36,16 @@ export default defineConfig({
       '@swiper': fileURLToPath(new URL('./src/pages/Home/sliders', import.meta.url)),
       '@social_link': fileURLToPath(new URL('./src/components/socialLink', import.meta.url))
     }
+  },
+  server: {
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://tanin.phosagro.picom.su',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
+    }
   }
 })

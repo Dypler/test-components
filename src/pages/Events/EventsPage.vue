@@ -11,7 +11,7 @@ const pageSize = ref(8) // Количество новостей, отображ
 const totalEventsCount = ref(36) // Предполагаем, что всего у нас 50 новостей
 const currentCount = ref(8) // Сколько новостей уже отображено
 const windowWidth = ref(window.innerWidth)
-const displayMode = ref('плиткой')
+const displayMode = ref('Плиткой')
 async function fetchEvents() {
   eventsItems.value = Array.from({ length: currentCount.value }, (_, i) => ({
     id: i + 1,
@@ -66,7 +66,7 @@ const filterText = ref('Скрыть фильтр')
 
 const toggleFilter = () => {
   isFilterVisible.value = !isFilterVisible.value
-  filterText.value = isFilterVisible.value ? 'Фильтр' : 'Скрыть фильтр'
+  filterText.value = isFilterVisible.value ? 'Скрыть фильтр' : 'Фильтр'
 }
 </script>
 <template>
@@ -92,7 +92,7 @@ const toggleFilter = () => {
       class="flex flex-col md:flex-row justify-between pt-[17px] md:pt-[37px] xl:pt-[43px] gap-[10px]"
     >
       <div class="flex flex-col xl:flex-row gap-[10px]">
-        <div class="flex xl:flex-row gap-[10px]" v-auto-animate>
+        <div class="flex xl:flex-row gap-[10px]">
           <a-space>
             <a-select
               ref="select"
@@ -167,23 +167,36 @@ const toggleFilter = () => {
         </div>
         <a-space>
           <a-select
-            ref="select"
+            ref="displayModeSelect"
             v-model="displayMode"
             placeholder="Плиткой"
             @focus="focus"
             @change="handleChange"
           >
             <a-select-option value="Плиткой">
-              <img src="/main/plitka.svg" alt="" />
+              <img src="/main/selectIcon/plitka.svg" />
               Плиткой
             </a-select-option>
-            <a-select-option value="Списком">Списком</a-select-option>
-            <a-select-option value="archive">Календарь</a-select-option>
+            <a-select-option value="Списком">
+              <img src="/main/selectIcon/list.svg" />
+              Списком</a-select-option
+            >
+            <a-select-option value="archive">
+              <img src="/main/selectIcon/calendar.svg" />
+              Календарь</a-select-option
+            >
           </a-select>
         </a-space>
       </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 xl:gap-[40px] pt-[40px]">
+    <div
+      v-if="isFilterVisible"
+      :class="[
+        'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 xl:gap-[40px] pt-[40px]',
+        displayMode == 'Плиткой' ? 'grid-cols-1' : 'grid-cols-2'
+      ]"
+      v-auto-animate
+    >
       <router-link
         v-for="event in eventsItems"
         :key="event.id"

@@ -7,6 +7,7 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 
 import HomePage from '@home/HomePage.vue'
 import EventsPage from '@events/EventsPage.vue'
+import EventsPageItem from '@events/EventsPageItem.vue'
 import NewsPage from '@news/NewsPage.vue'
 import CoursesPage from '@courses/СoursesPage.vue'
 import HelpPage from '@help/HelpPage.vue'
@@ -18,6 +19,7 @@ import './assets/main.scss'
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/events', name: 'Events', component: EventsPage },
+  { path: '/events/id', name: 'EventsItem', component: EventsPageItem },
   { path: '/news', name: 'News', component: NewsPage },
   { path: '/news/id', name: 'NewsItem', component: NewsPageItem },
   { path: '/courses', name: 'Courses', component: CoursesPage },

@@ -109,3 +109,16 @@
 .ant-select-selection-placeholder {
   color: white;
 }
+.ant-select-item-option-content {
+  flex: auto;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  display: flex;
+  gap: 10px;
+}

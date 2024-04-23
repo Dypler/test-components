@@ -14,29 +14,28 @@ import 'ant-design-vue/lib/select/style/index.css'
     <a-breadcrumb>
       <a-breadcrumb-item> <router-link to="/">Главная</router-link></a-breadcrumb-item>
       <template #separator><span class="custom__separator"></span></template>
-      <a-breadcrumb-item
-        ><router-link to="/courses">Обучающие материалы</router-link>
-      </a-breadcrumb-item>
+      <a-breadcrumb-item><router-link to="/courses">События</router-link> </a-breadcrumb-item>
       <template><span class="custom__separator"></span></template>
 
-      <a-breadcrumb-item>Название курса </a-breadcrumb-item>
+      <a-breadcrumb-item>Название события </a-breadcrumb-item>
     </a-breadcrumb>
-    <div class="flex justify-between pt-[27px] md:pt-[30px] xl:pt-[46px]">
+    <div class="flex items-start gap-1 pt-[27px] md:pt-[30px] xl:pt-[46px]">
       <h1
         class="font-bebas text-[32px] md:text-[48px] xl:text-[54px] leading-8 md:leading-[48px] xl:leading-[54px] text-white text-left max-w-[887px]"
       >
-        Название курса
+        Название события
       </h1>
-      <div class="flex gap-2">
-        <CopyIcon />
-        <ShareIcon />
-      </div>
+      <p
+        class="text-red-500 md:text-[22px] md:leading-[22px] xl:text-[28px] xl:leading-6 font-normal font-bebas"
+      >
+        12+
+      </p>
     </div>
     <div class="pt-6">
       <p
-        class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
+        class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[200px]"
       >
-        01 февраля
+        15 февраля - 20 марта
       </p>
       <img
         class="pt-[22px] md:pt-6 w-full max-h-[600px] object-cover"
