@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
 import Antd from 'ant-design-vue'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
+import axios from 'axios'
 
 import HomePage from '@home/HomePage.vue'
 import EventsPage from '@events/EventsPage.vue'
@@ -35,6 +36,11 @@ const router = createRouter({
     return { top: 0 }
   }
 })
-const app = createApp(App).use(createPinia()).use(router).use(Antd).use(autoAnimatePlugin)
+const app = createApp(App)
+  .use(createPinia())
+  .use(router)
+  .use(Antd)
+  .use(autoAnimatePlugin)
+  .use(axios)
 
 app.mount('#app')
