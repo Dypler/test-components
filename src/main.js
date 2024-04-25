@@ -20,11 +20,11 @@ import './assets/main.scss'
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/events', name: 'Events', component: EventsPage },
-  { path: '/events/id', name: 'EventsItem', component: EventsPageItem },
+  { path: '/events/:id', name: 'EventsItem', component: EventsPageItem },
   { path: '/news', name: 'News', component: NewsPage },
-  { path: '/news/id', name: 'NewsItem', component: NewsPageItem },
+  { path: '/news/:id', name: 'NewsItem', component: NewsPageItem },
   { path: '/courses', name: 'Courses', component: CoursesPage },
-  { path: '/courses/id', name: 'CoursesItem', component: CoursesPageItem },
+  { path: '/courses/:id', name: 'CoursesItem', component: CoursesPageItem },
   { path: '/help', name: 'Help', component: HelpPage }
 ]
 
