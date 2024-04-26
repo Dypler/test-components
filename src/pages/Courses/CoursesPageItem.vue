@@ -21,7 +21,8 @@ onMounted(getCourseInfo);
 const course = ref({});
 
 function parseDate(dateStr) {
-  if (!dateStr) return null
+  if (!dateStr) return null;
+  dateStr = dateStr.indexOf(':') >= 0 ? dateStr : dateStr + ' 00:00:00';
   const parsedDate = parse(dateStr, 'dd.MM.yyyy HH:mm:ss', new Date())
   return isValid(parsedDate) ? parsedDate : null
 }
