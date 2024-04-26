@@ -8,6 +8,61 @@ import WhatsappLink from '@social_link/WhatsappLink.vue'
 import OdnoklasnikiLink from '@social_link/OdnoklasnikiLink.vue'
 import 'ant-design-vue/lib/breadcrumb/style/index.css'
 import 'ant-design-vue/lib/select/style/index.css'
+
+import axios from 'axios'
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { parse, isValid } from 'date-fns';
+
+const route = useRoute();
+
+onMounted(getFeedInfo);
+const feed = ref({});
+
+function parseDate(dateStr) {
+  if (!dateStr) return null
+  dateStr = dateStr.indexOf(':') >= 0 ? dateStr : dateStr + ' 00:00:00';
+  const parsedDate = parse(dateStr, 'dd.MM.yyyy HH:mm:ss', new Date())
+  return isValid(parsedDate) ? parsedDate : null
+}
+
+function getDate(dateStart, dateEnd) {
+  const startDate = parseDate(dateStart)
+  const endDate = parseDate(dateEnd)
+  const formatter = new Intl.DateTimeFormat('ru-RU', { month: 'long', day: 'numeric' })
+  let dateDisplay = formatter.format(startDate)
+  console.log(dateStart);
+  if (endDate) {
+    const endFormatted = formatter.format(endDate)
+    const sameMonth =
+      startDate.getMonth() === endDate.getMonth() &&
+      startDate.getFullYear() === endDate.getFullYear()
+    dateDisplay = sameMonth
+      ? `${startDate.getDate()} - ${endDate.getDate()} ${formatter.formatToParts(endDate).find((part) => part.type === 'month').value}`
+      : `${dateDisplay} - ${endFormatted}`
+    console.log(dateDisplay);
+  }
+  return dateDisplay;
+}
+
+async function getFeedInfo() {
+  try {
+    const id = route.params.id;
+
+    const url = `http://tanin.phosagro.picom.su/api/feeds/${id}/`;
+    const response = await axios.get(url);
+
+    let feedData = response?.data?.data?.feed;
+    console.log(feedData)
+    const dateDisplay = getDate(feedData?.date_start, feedData?.date_end);
+    console.log(dateDisplay)
+    feedData.dateDisplay = dateDisplay;
+
+    feed.value = feedData;
+  } catch (e) {
+    console.log(e);
+  }
+}
 </script>
 <template>
   <div class="container">
@@ -16,13 +71,13 @@ import 'ant-design-vue/lib/select/style/index.css'
       <template #separator><span class="custom__separator"></span></template>
       <a-breadcrumb-item><router-link to="/news">Новости</router-link> </a-breadcrumb-item>
       <template><span class="custom__separator"></span></template>
-      <a-breadcrumb-item>Название новости </a-breadcrumb-item>
+      <a-breadcrumb-item>{{feed?.name}}</a-breadcrumb-item>
     </a-breadcrumb>
     <div class="flex justify-between pt-[27px] md:pt-[30px] xl:pt-[46px]">
       <h1
         class="font-bebas text-[32px] md:text-[48px] xl:text-[54px] leading-8 md:leading-[48px] xl:leading-[54px] text-white text-left max-w-[887px]"
       >
-        Заголовок события, которое может называться длинно. При клике ведет на карточку
+        {{feed?.name}}
       </h1>
       <div class="flex gap-2">
         <CopyIcon />
@@ -33,46 +88,18 @@ import 'ant-design-vue/lib/select/style/index.css'
       <p
         class="border-2 px-3 border-white font-bebas text-xl flex text-white justify-center max-w-[109px]"
       >
-        01 февраля
+        {{feed?.dateDisplay}}
       </p>
       <img
         class="pt-[22px] md:pt-6 w-full max-h-[600px] object-cover"
-        src="/main/news1.png"
+        :src="feed?.detail_picture"
         alt=""
       />
       <p
         class="font-roboto text-white font-light text-base leading-[24px] md:text-xl md:leading-loose pt-[37px] md:pt-12 text-left max-w-[888px]"
-      >
-        Не следует, однако забывать, что дальнейшее развитие различных форм деятельности влечет за
-        собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении
-        поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие
-        различных форм деятельности позволяет выполнять важные задания по разработке позиций,
-        занимаемых участниками в отношении поставленных задач. Таким образом рамки и место обучения
-        кадров представляет собой интересный эксперимент проверки форм развития. Разнообразный и
-        богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные
-        задания по разработке дальнейших направлений развития. Таким образом начало повседневной
-        работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в
-        формировании систем массового участия. Повседневная практика показывает, что постоянный
-        количественный рост и сфера нашей активности играет важную роль в формировании существенных
-        финансовых и административных условий.
-        <br /><br />
-        Товарищи! начало повседневной работы по формированию позиции обеспечивает широкому кругу
-        (специалистов) участие в формировании соответствующий условий активизации. Значимость этих
-        проблем настолько очевидна, что реализация намеченных плановых заданий обеспечивает широкому
-        кругу (специалистов) участие в формировании новых предложений. Задача организации, в
-        особенности же консультация с широким активом играет важную роль в формировании существенных
-        финансовых и административных условий.
-        <br /><br />
-        Задача организации, в особенности же рамки и место обучения кадров обеспечивает широкому
-        кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным
-        потребностям. Разнообразный и богатый опыт сложившаяся структура организации способствует
-        подготовки и реализации систем массового участия. Повседневная практика показывает, что
-        начало повседневной работы по формированию позиции в значительной степени обуславливает
-        создание позиций, занимаемых участниками в отношении поставленных задач. Повседневная
-        практика показывает, что укрепление и развитие структуры требуют от нас анализа позиций,
-        занимаемых участниками в отношении поставленных задач.
+        v-html="feed?.detail_text ? feed?.detail_text : ''">
       </p>
-      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" />
+      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="feed?.photos"/>
     </div>
     <div
       class="pt-[32px] md:pt-[50px] xl:pt-[60px] flex flex-col md:flex-row gap-2 md:gap-4 pb-[44px] md:pb-[65px]"
