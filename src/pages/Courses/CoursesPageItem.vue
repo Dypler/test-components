@@ -94,7 +94,7 @@ async function getCourseInfo() {
         v-html="course?.detail_text ? course?.detail_text : ''">
 
       </p>
-      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :items="course.name" />
+      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="course.photos" />
     </div>
     <div class="pt-[32px] md:pt-[50px] xl:pt-[60px] flex flex-col md:flex-row gap-2 md:gap-4 pb-[44px] md:pb-[65px]">
       <p class="text-slate-500 text-xl font-light font-roboto leading-loose">Поделиться:</p>

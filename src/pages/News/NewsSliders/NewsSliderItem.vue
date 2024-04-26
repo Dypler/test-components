@@ -7,7 +7,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 const modules = [Navigation, Pagination]
-
+const props = defineProps(['photos']);
+console.log(props);
 const prev = ref(null)
 const next = ref(null)
 const pagination = ref(null)
@@ -50,24 +51,9 @@ const breakpoints = {
       :breakpoints="breakpoints"
       class="mySwiper flex ml-0"
     >
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo1.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo1.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo2.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo3.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo4.png" alt="" />
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full object-cover max-w-[162px]" src="/main/newsSwiper/photo5.png" alt="" />
-      </swiper-slide>
+    <swiper-slide v-for="photo in props.photos" key="">
+      <img class="w-full object-cover max-w-[162px]" :src="photo" alt="" />
+    </swiper-slide>
     </swiper>
   </div>
 </template>
