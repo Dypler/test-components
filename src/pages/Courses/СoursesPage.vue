@@ -3,7 +3,8 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import CopyIcon from '../../components/common/CopyIcon.vue'
 import ShareIcon from '../../components/common/ShareIcon.vue'
-import { parse, isValid } from 'date-fns'
+
+import { getDate, COMPONENTS, addToArrayWithDistinct } from '@/components/components';
 
 const pageSize = ref(4) // Начальное количество отображаемых курсов
 const pageNum = ref(1) // Текущее количество загружаемых элементов
@@ -11,17 +12,11 @@ const courseItems = ref([]) // Список курсов
 const selectedAge = ref('') // Выбранный возраст
 
 // Парсинг даты из строки
-function parseDate(dateStr) {
-  if (!dateStr) return null
-  dateStr = dateStr.indexOf(':') >= 0 ? dateStr : dateStr + ' 00:00:00';
-  const parsedDate = parse(dateStr, 'dd.MM.yyyy HH:mm:ss', new Date())
-  return isValid(parsedDate) ? parsedDate : null
-}
 
 // Загрузка курсов с учетом возраста и количества
 async function fetchCourses() {
   try {
-    const url = `http://tanin.phosagro.picom.su/api/courses/?page=${pageNum.value}&counts=${pageSize.value}`;
+    const url = `${COMPONENTS.API}/courses/?page=${pageNum.value}&counts=${pageSize.value}`;
     const response = await axios.get(url)
     let courses = response.data.data.courses
 
@@ -38,26 +33,7 @@ async function fetchCourses() {
     courseItems.value.push(
       ...courses
         .map((course) => {
-          const startDate = parseDate(course.date_start)
-          const endDate = parseDate(course.date_end)
-
-          if (!startDate) {
-            console.error('Некорректная дата начала для курса:', course)
-            return null
-          }
-
-          const formatter = new Intl.DateTimeFormat('ru-RU', { month: 'long', day: 'numeric' })
-          let dateDisplay = formatter.format(startDate)
-          if (endDate) {
-            const endFormatted = formatter.format(endDate)
-            const sameMonth =
-              startDate.getMonth() === endDate.getMonth() &&
-              startDate.getFullYear() === endDate.getFullYear()
-            dateDisplay = sameMonth
-              ? `${startDate.getDate()} - ${endDate.getDate()} ${formatter.formatToParts(endDate).find((part) => part.type === 'month').value}`
-              : `${dateDisplay} - ${endFormatted}`
-          }
-
+          const dateDisplay = getDate(course?.date_start, course?.date_end);
           return {
             id: course.id,
             title: course.name,
@@ -77,7 +53,9 @@ onMounted(fetchCourses)
 
 // Обработчик изменения размера страницы
 function handleChange(newSize) {
-  pageSize.value = Number(newSize)
+  pageSize.value = Number(newSize);
+  pageNum.value = 1;
+  courseItems.value = [];
   fetchCourses()
 }
 

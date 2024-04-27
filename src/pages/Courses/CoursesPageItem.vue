@@ -13,44 +13,19 @@ import 'ant-design-vue/lib/select/style/index.css';
 
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { parse, isValid } from 'date-fns';
+import { getDate, COMPONENTS } from '@/components/components';
 
 const route = useRoute();
 
 onMounted(getCourseInfo);
 const course = ref({});
 
-function parseDate(dateStr) {
-  if (!dateStr) return null;
-  dateStr = dateStr.indexOf(':') >= 0 ? dateStr : dateStr + ' 00:00:00';
-  const parsedDate = parse(dateStr, 'dd.MM.yyyy HH:mm:ss', new Date())
-  return isValid(parsedDate) ? parsedDate : null
-}
-
-function getDate(dateStart, dateEnd) {
-  const startDate = parseDate(dateStart)
-  const endDate = parseDate(dateEnd)
-  const formatter = new Intl.DateTimeFormat('ru-RU', { month: 'long', day: 'numeric' })
-  let dateDisplay = formatter.format(startDate)
-  console.log(dateDisplay);
-  if (endDate) {
-    const endFormatted = formatter.format(endDate)
-    const sameMonth =
-      startDate.getMonth() === endDate.getMonth() &&
-      startDate.getFullYear() === endDate.getFullYear()
-    dateDisplay = sameMonth
-      ? `${startDate.getDate()} - ${endDate.getDate()} ${formatter.formatToParts(endDate).find((part) => part.type === 'month').value}`
-      : `${dateDisplay} - ${endFormatted}`
-    console.log(dateDisplay);
-  }
-  return dateDisplay;
-}
 
 async function getCourseInfo() {
   try {
     const id = route.params.id;
 
-    const url = `http://tanin.phosagro.picom.su/api/courses/${id}/`;
+    const url = `${COMPONENTS.API}/courses/${id}/`;
     const response = await axios.get(url);
     let courseData = response?.data?.data?.course;
 

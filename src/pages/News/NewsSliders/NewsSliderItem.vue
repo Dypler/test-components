@@ -8,7 +8,6 @@ import 'swiper/css/navigation'
 
 const modules = [Navigation, Pagination]
 const props = defineProps(['photos']);
-console.log(props);
 const prev = ref(null)
 const next = ref(null)
 const pagination = ref(null)
