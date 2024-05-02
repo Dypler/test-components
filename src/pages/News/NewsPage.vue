@@ -8,6 +8,8 @@ import 'ant-design-vue/lib/breadcrumb/style/index.css'
 import 'ant-design-vue/lib/select/style/index.css'
 import { COMPONENTS, getDate } from '@/components/components'
 
+import './NewsPage.scss'
+
 const newsItems = ref([])
 const pageSize = ref(4) // Начальное количество отображаемых курсов
 const pageNum = ref(1) // Текущее количество загружаемых элементов
@@ -34,18 +36,11 @@ async function fetchNews() {
           }
         })
         .filter(Boolean)
-    )
-    // newsItems.value = Array.from({ length: currentCount.value }, () => ({
-    //   date: `01 февраля`,
-    //   title: 'Заголовок события, которое может называться длинно. При клике ведет на карточку',
-    //   description:
-    //     'Не следует, однако забывать, что реализация намеченных плановых заданий требует определения и уточнения направлений прогрессивного развития.',
-    //   imageUrl: `/main/news1.png` // Допустим, API возвращает разные URL для каждой новости
-    // }))
+    );
+    console.log(newsItems.value[0]?.date)
   } catch (error) {
     console.error('Ошибка при загрузке курсов: ', error)
   }
-
 }
 
 // Вызываем загрузку начального списка новостей
@@ -81,20 +76,19 @@ function loadMoreNews() {
     </h1>
   </div>
   <div
-    class="relative w-full h-[500px] md:h-[683px] xl:h-[713px] bg-[url('/main/bg_news.png')] bg-no-repeat bg-center bg-cover flex items-end mt-[30px] md:mt-[66px] xl:mt-20">
+    class="relative w-full h-[500px] md:h-[683px] xl:h-[713px]  bg-no-repeat bg-center bg-cover flex items-end mt-[30px] md:mt-[66px] xl:mt-20"
+    :style="{ 'background-image': 'url(' + newsItems[0]?.imageUrl + ') ' }">
     <div class="container cursor-pointer">
       <p class="border-2 border-white font-bebas text-xl text-center text-white max-w-[109px] px-2 py-1">
-        1 февраля
+        {{ newsItems[0]?.date }}
       </p>
       <div class="flex pt-[18px] xl:gap-8 flex-col gap-[10px] md:flex-row">
         <h2
           class="w-full max-w-[564px] font-bebas text-white text-[28px] leading-[33.60px] md:text-[38px] md:leading-[45px] xl:text-[54px] xl:leading-[54px]">
-          Заголовок события, которое может называться длинно. При клике ведет на карточку
+          {{ newsItems[0]?.title }}
         </h2>
-        <p class="w-max-[582px] w-full font-roboto text-[14px] md:text-[16px] xl:text-[20px] text-white font-light">
-          Краткое описание события. Очень важный элемент, который кратко описывает суть события. Не
-          следует, однако забывать, что реализация намеченных плановых заданий требуют определения и
-          уточнения направлений прогрессивного развития.
+        <p class="w-max-[582px] w-full font-roboto text-[14px] md:text-[16px] xl:text-[20px] text-white font-light"
+          v-html="newsItems[0]?.description">
         </p>
       </div>
     </div>
@@ -125,8 +119,8 @@ function loadMoreNews() {
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 xl:gap-[40px] pt-[40px]"
       v-auto-animate>
-      <router-link class="flex flex-col gap-[15px] md:gap-4 w-full group cursor-pointer" v-for="news in newsItems"
-        :key="news.title" :to="`/news/${news.id}`">
+      <router-link class="flex flex-col gap-[15px] md:gap-4 w-full group cursor-pointer"
+        v-for="news in newsItems.slice(1)" :key="news.title" :to="`/news/${news.id}`">
         <div class="relative">
           <div class="scale">
             <img class="block transition ease-out duration-700 group-hover:scale-[1.1]" :src="news.imageUrl"
@@ -143,8 +137,7 @@ function loadMoreNews() {
         <p class="font-bebas text-white font-bold text-[20px] xl:text-2xl text-gradient-hover tracking-wider">
           {{ news.title }}
         </p>
-        <p class="font-roboto text-white text-base leading-relaxed font-light">
-          {{ news.description }}
+        <p class="font-roboto text-white text-base leading-relaxed font-light" v-html="news.description">
         </p>
       </router-link>
     </div>
@@ -158,40 +151,5 @@ function loadMoreNews() {
   </div>
 </template>
 <style scoped>
-.text-gradient-hover {
-  transition: background-image 0.7s ease;
-  /* Явно указываем, что переход применяется к background-size */
-}
 
-.group:hover .text-gradient-hover {
-  background-image: linear-gradient(to right, #f19945, #da0048);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-image 0.7s ease;
-}
-
-.group {
-  transition:
-    background-color 0.7s ease-linear,
-    color 0.7s ease-linear;
-}
-
-.scale {
-  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 85% 100%, 0% 100%);
-
-  display: inline-block;
-  overflow: hidden;
-}
-
-.background__hover {
-  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 82% 100%, 0% 100%);
-  background-size: 100%;
-  transition: background-size 0.7s ease;
-}
-
-.background__hover:hover {
-  background-size: 110%;
-}
 </style>

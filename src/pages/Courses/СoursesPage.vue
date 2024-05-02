@@ -4,7 +4,10 @@ import axios from 'axios'
 import CopyIcon from '../../components/common/CopyIcon.vue'
 import ShareIcon from '../../components/common/ShareIcon.vue'
 
-import { getDate, COMPONENTS, addToArrayWithDistinct } from '@/components/components';
+import { getDate, COMPONENTS } from '@/components/components';
+
+import './СoursesPage.scss'
+
 
 const pageSize = ref(4) // Начальное количество отображаемых курсов
 const pageNum = ref(1) // Текущее количество загружаемых элементов
@@ -128,47 +131,3 @@ function loadMoreCourses() {
     </div>
   </div>
 </template>
-<style scoped lang="scss">
-// @media (min-width: 1280px) {
-//   .large-grid-item {
-//     grid-area: 1 / 1 / 3 / 2;
-//   }
-// }
-
-.text-gradient-hover {
-  transition: background-image 0.7s ease;
-  /* Явно указываем, что переход применяется к background-size */
-}
-
-.group:hover .text-gradient-hover {
-  background-image: linear-gradient(to right, #f19945, #da0048);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-image 0.7s ease;
-}
-
-.group {
-  transition:
-    background-color 0.7s ease-linear,
-    color 0.7s ease-linear;
-}
-
-.scale {
-  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 85% 100%, 0% 100%);
-
-  display: inline-block;
-  overflow: hidden;
-}
-
-.background__hover {
-  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 82% 100%, 0% 100%);
-  background-size: 100%;
-  transition: background-size 0.7s ease;
-}
-
-.background__hover:hover {
-  background-size: 110%;
-}
-</style>

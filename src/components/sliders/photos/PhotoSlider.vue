@@ -1,16 +1,18 @@
 <script setup>
-import { Pagination, Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { ref } from 'vue'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { ref } from 'vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-const modules = [Navigation, Pagination]
+import './PhotoSlider.scss';
+
+const modules = [Navigation, Pagination];
 const props = defineProps(['photos']);
-const prev = ref(null)
-const next = ref(null)
-const pagination = ref(null)
+const prev = ref(null);
+const next = ref(null);
+const pagination = ref(null);
 
 const breakpoints = {
   320: {
@@ -28,7 +30,7 @@ const breakpoints = {
     spaceBetween: 24,
     slidesPerGroup: 1
   }
-}
+};
 </script>
 
 <template>
@@ -57,17 +59,5 @@ const breakpoints = {
   </div>
 </template>
 <style scoped>
-.swiper-button-prev,
-.swiper-button-next {
-  top: 64%;
-}
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: var(--swiper-pagination-bottom, -30px);
-  top: var(--swiper-pagination-top, auto);
-  left: 0;
-  width: 100%;
-}
+
 </style>

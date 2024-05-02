@@ -1,17 +1,3 @@
-<template>
-  <div class="flex justify-between items-center gap-5">
-    <div
-      class="cursor-pointer z-40"
-      v-for="(image, index) in images"
-      :key="index"
-      @mouseover="setImage(index, true)"
-      @mouseleave="setImage(index, false)"
-    >
-      <img class="w-full h-full h-max-[60px] md:h-[100px]" :src="image.current" />
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -52,3 +38,12 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="flex justify-between items-center gap-5">
+    <div class="cursor-pointer z-40" v-for="(image, index) in images" :key="index" @mouseover="setImage(index, true)"
+      @mouseleave="setImage(index, false)">
+      <img class="w-full h-full h-max-[60px] md:h-[100px]" :src="image.current" />
+    </div>
+  </div>
+</template>

@@ -1,0 +1,13 @@
+.swiper-button-prev,
+.swiper-button-next {
+  top: 64%;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, -30px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}

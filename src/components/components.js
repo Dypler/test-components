@@ -24,13 +24,6 @@ export function getDate(dateStart, dateEnd) { //надо бы вынести в 
     return dateDisplay;
 }
 
-export function addToArrayWithDistinct(array, elem) {
-    if (!array.includes(elem)) { // Проверяем, есть ли город в массиве
-        array.push(elem); // Добавляем город, если его нет
-    }
-    console.log(array)
-}
-
 
 export const COMPONENTS = {
     API: 'http://tanin.phosagro.picom.su/api'

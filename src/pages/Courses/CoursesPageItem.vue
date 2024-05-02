@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import CopyIcon from '../../components/common/CopyIcon.vue';
 import ShareIcon from '../../components/common/ShareIcon.vue';
-import NewsSliderItem from '../News/NewsSliders/NewsSliderItem.vue';
+import PhotoSlider from '../../components/sliders/photos/PhotoSlider.vue';
 import TelegramLink from '@/components/socialLink/TelegramLink.vue';
 import VkLink from '@/components/socialLink/VkLink.vue';
 import WhatsappLink from '@/components/socialLink/WhatsappLink.vue';
@@ -70,7 +70,7 @@ async function getCourseInfo() {
         v-html="course?.detail_text ? course?.detail_text : ''">
 
       </p>
-      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="course.photos" />
+      <PhotoSlider class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="course.photos" />
     </div>
     <div class="pt-[32px] md:pt-[50px] xl:pt-[60px] flex flex-col md:flex-row gap-2 md:gap-4 pb-[44px] md:pb-[65px]">
       <p class="text-slate-500 text-xl font-light font-roboto leading-loose">Поделиться:</p>

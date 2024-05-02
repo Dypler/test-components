@@ -1,7 +1,7 @@
 <script setup>
 import CopyIcon from '@common/CopyIcon.vue'
 import ShareIcon from '@common/ShareIcon.vue'
-import NewsSliderItem from './NewsSliders/NewsSliderItem.vue'
+import PhotoSlider from '../../components/sliders/photos/PhotoSlider.vue'
 import TelegramLink from '@social_link/TelegramLink.vue'
 import VkLink from '@social_link/VkLink.vue'
 import WhatsappLink from '@social_link/WhatsappLink.vue'
@@ -72,7 +72,7 @@ async function getFeedInfo() {
         class="font-roboto text-white font-light text-base leading-[24px] md:text-xl md:leading-loose pt-[37px] md:pt-12 text-left max-w-[888px]"
         v-html="feed?.detail_text ? feed?.detail_text : ''">
       </p>
-      <NewsSliderItem class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="feed?.photos"/>
+      <PhotoSlider class="pt-[30px] md:pt-[48px] xl:pt-[60px]" :photos="feed?.photos"/>
     </div>
     <div
       class="pt-[32px] md:pt-[50px] xl:pt-[60px] flex flex-col md:flex-row gap-2 md:gap-4 pb-[44px] md:pb-[65px]"
