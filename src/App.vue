@@ -16,7 +16,7 @@ import Footer from './components/footer/Footer.vue'
   border-left-width: 1px;
   border-right-width: 1px;
   --tw-border-opacity: 0.6;
-  --tw-border-opacity: 1;
+  --tw-border-opacity: 0.6;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   margin-left: 2.5rem /* 40px */;
   margin-right: 2.5rem /* 40px */;
